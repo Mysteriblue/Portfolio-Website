@@ -1,0 +1,3 @@
+$("body").touch({
+    onSwipeLeft: function(...){...}
+});
