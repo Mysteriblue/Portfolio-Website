@@ -12,51 +12,39 @@
 
 <div class="wrapper">
     <div class="container">
-        <div class="Inhalt">
-            <body data-role="page" id="projekt1" class="demo-page" data-dom-cache="true" data-theme="b" data-prev="Startseite" data-next="Projekt1">
+
+            <div id="projekte">
                 [<!--https://demos.jquerymobile.com/1.4.5/swipe-page/#&ui-state=dialog*/-->]
-                <div class="Startseite">
+                <div class="projekte-full Startseite">
                     <ul>
                         <li>Startseite</li>
                     </ul>
                 </div>
-                <div class="Projekt1">
-                    <body data-role="touch" data-on-swipe-left="mySwipeFunction">
+                <div class="projekte-full Projekt1">
+                    <div data-role="touch" data-on-swipe-left="mySwipeFunction">
                     <ul>
                         <li><a href="./projekt1.html">Digital Customer Journey</a></li>
                     </ul>
-                </body>
                 </div>
-                <div class="Projekt2">
-                    <ul>
-                        <li>Herzfroh 2.0</li>
-                    </ul>
                 </div>
-                <div class="Projekt3">
-                    <ul>
-                        <li>Tangs Sweets</li>
-                    </ul>
-                </div>
-                <div class="Projekt4">
-                    <ul>
-                        <li>Percentage of the population living in slums</li>
-                    </ul>
-                </div>
-            </body>
+               
+            </div>  
 
-            <script>
-                function mySwipeFunction navnext ( next ) {
-                    $(":mobile-pagecontainer" ).pagecontainer( "change" , next + projekt1.html, {
-                        transition: "slide"
-                    });
-                }
-            </script>
+            <!-- <script> 
+                // function mySwipeFunction navnext ( next ) {
+                    // $(":mobile-pagecontainer" ).pagecontainer( "change" , next + projekt1.html, {
+                        // transition: "slide"
+                    // });
+                // }
+            // </script> -->
 
-        </div>
+      
     </div>
    
 </div>
-    
-    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+<script src="./main.js"></script>
 </body>
+
 </html>
