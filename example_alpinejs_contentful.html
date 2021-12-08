@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" x-data="getData()" x-init="fetchStuff()">
+        <template x-if="content">
+            <template x-for="item in content">
+                <div class="project">
+                    <h1 x-text="item.fields.title"></h1>
+                    <p x-text="item.fields.description"></p>
+                    <img :src="item.fields.file.url" />
+                </div>
+            </template>
+        </template>
+    </div>
+    <!-- AlpineJS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script>
+        function getData() {
+            return {
+                content: null,
+                token: "9LQ6-cB0mn3dXYGsLGlFdxr8KcA_dJfxtrNAdDXGfIo",
+                fetchStuff() {
+                    fetch(
+                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/assets?access_token=' +
+                            this.token)
+                        .then(res => res.json())
+                        .then(data => {
+                            this.content = data.items;
+                        });
+                }
+            }
+        }
+    </script>
+</body>
