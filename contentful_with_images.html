@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            max-width: 100%;
+        }
+        .img-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 1rem;
+        }
+        .split-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" x-data="getData()" x-init="fetchStuff();">
+        <template x-if="content">
+            <template x-for="item in content">
+                <div class="project">
+                    <h1 x-text="item.fields.header1"></h1>
+                    <p x-text="item.fields.summary"></p>
+                    <template x-if="images">
+                        <!-- die funktion returnImageURL sucht den passenden url zur bild id -->
+                        <img :src="returnImageURL(images,item.fields.bild1.sys.id)" />
+                    </template>
+                    <h2 x-text="item.fields.header2"></h2>
+                    <h2 x-text="item.fields.header3"></h2>
+                    <p x-text="item.fields.text1"></p>
+                    <img :src="returnImageURL(images,item.fields.bild2.sys.id)" />
+                    <h1 x-text="item.fields.header4"></h1>
+                    <p x-text="item.fields.text2"></p>
+                    <!-- im bild10 ist es ein array, deshalb ein x-for loop -->
+                    <div class="split-grid">
+                        <template x-for="img in item.fields.bild10">
+                            <img :src="returnImageURL(images,img.sys.id)" />
+                        </template>
+                    </div>
+                    <h1 x-text="item.fields.header5"></h1>
+                    <p x-text="item.fields.text3"></p>
+                    <img :src="returnImageURL(images,item.fields.bild4.sys.id)" />
+                    <img :src="returnImageURL(images,item.fields.bild5.sys.id)" />
+                    <h1 x-text="item.fields.header6"></h1>
+                    <p x-text="item.fields.text4"></p>
+                    <div class="img-grid">
+                        <template x-for="img in item.fields.bild6">
+                            <img :src="returnImageURL(images,img.sys.id)" />
+                        </template>
+                    </div>
+                    <h1 x-text="item.fields.header7"></h1>
+                    <p x-text="item.fields.text5"></p>
+                    <img :src="returnImageURL(images,item.fields.bild7.sys.id)" />
+                    <p x-text="item.fields.text6"></p>
+                    <img :src="returnImageURL(images,item.fields.bild8.sys.id)" />
+                    <p x-text="item.fields.text7"></p>
+                </div>
+                </div>
+            </template>
+        </template>
+    </div>
+    <!-- AlpineJS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script>
+        function getData() {
+            return {
+                content: null,
+                images: null,
+                token: "9LQ6-cB0mn3dXYGsLGlFdxr8KcA_dJfxtrNAdDXGfIo",
+                contenttype: "dcj",
+                fetchStuff() {
+                    // getting content for specific contenttype
+                    fetch(
+                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/entries?access_token=' +
+                            this.token + "&content_type=" + this.contenttype)
+                        .then(res => res.json())
+                        .then(data => {
+                            this.content = data.items;
+                        });
+
+                    // getting all assets from contentful and storing them in array this.images
+                    fetch(
+                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/assets?access_token=' +
+                            this.token)
+                        .then(res => res.json())
+                        .then(data => {
+                            this.images = data.items;
+                        });
+                }
+            }
+        }
+
+        function returnImageURL(_image_array, _id) {
+            let image = _image_array.find(element => element.sys.id == _id);
+            return image.fields.file.url;
+        }
+    </script>
+</body>
