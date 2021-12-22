@@ -22,9 +22,9 @@
         <template x-if="content">
             <template x-for="item in content">
                 <div class="project">
-                    <h1 x-text="item.fields.header1"></h1>
-                    <p x-text="item.fields.summary"></p>
-                    <img :src="item.fields.bild1.url" />
+                    <h1 x-text="content.header1"></h1>
+                    <p x-text="content.summary"></p>
+                    <img :src="content.bild1.url" />
                 </div>
             </template>
         </template>

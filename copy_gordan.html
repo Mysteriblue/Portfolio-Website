@@ -36,48 +36,7 @@
     <div class="container" x-data="getData()" x-init="fetchStuff();">
         <template x-if="content">
                 <div class="project">
-                    <h1 x-text="content.header1"></h1>
-                    <p x-text="content.summary1"></p>
-                    <h1>-----</h1>
-                    <div class="subcontainer">
-                        <div></div>
-                        <p x-text="content.header1"></p>
-                    </div>
-                    <template x-if="images">
-                        <!-- die funktion returnImageURL sucht den passenden url zur bild id -->
-                        <img :src="returnImageURL(images,content.bild1.sys.id)" />
-                    </template>
-                    <h2 x-text="content.header2"></h2>
-                    <h2 x-text="content.header3"></h2>
-                    <p x-text="content.text1"></p>
-                    <img :src="returnImageURL(images,content.bild2.sys.id)" />
-                    <h1 x-text="content.header4"></h1>
-                    <p x-text="content.text2"></p>
-                    <!-- im bild10 ist es ein array, deshalb ein x-for loop -->
-                    <div class="split-grid">
-                        <template x-for="img in content.bild10">
-                            <img :src="returnImageURL(images,img.sys.id)" />
-                        </template>
-                    </div>
-                    <h1 x-text="content.header5"></h1>
-                    <p x-text="content.text3"></p>
-                    <img :src="returnImageURL(images,content.bild4.sys.id)" />
-                    <img :src="returnImageURL(images,content.bild5.sys.id)" />
-                    <h1 x-text="content.header6"></h1>
-                    <p x-text="content.text4"></p>
-                    <div class="img-grid">
-                        <template x-for="img in content.bild6">
-                            <img :src="returnImageURL(images,img.sys.id)" />
-                        </template>
-                    </div>
-                    <h1 x-text="content.header7"></h1>
-                    <p x-text="content.text5"></p>
-                    <img :src="returnImageURL(images,content.bild7.sys.id)" />
-                    <p x-text="content.text6"></p>
-                    <img :src="returnImageURL(images,content.bild8.sys.id)" />
-                    <p x-text="content.text7"></p>
-
-                    
+                    <h1 class="meine-klasse" x-text="content.header1"></h1>   
                 </div>
                 </div>
            
