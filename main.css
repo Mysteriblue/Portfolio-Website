@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html { 
+    scroll-behavior: smooth; 
+} 
+img{
+    max-width: 100%;
+}
+.container{
+    display: grid;
+    grid-template-columns: 18% 50% 25%;
+    grid-template-rows: repeat(62, 20vh);
+    column-gap: 3vw;
+    row-gap: 2vh;
+    width: 100vw;
+}
+body {
+    background-color: #0F0F0F;
+}
+.grid-2{
+    grid-column: 2;
+}
+.header {
+    grid-column: 1/4;
+    grid-row: 1/5;
+}
+table {
+    border-collapse: collapse;
+    width: 20vw;
+}
+
+th, td {
+  padding: 0.5vw;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+nav{
+    display: flex;
+    padding: 2%;
+    justify-content: space-between;
+    grid-column: 1/4;
+}
+.nav-links {
+    width: 200px;
+    grid-column: 1; 
+    grid-row: 7;
+    position: sticky;
+    list-style-type: none;
+    left: 5%;
+    font-family: 'Roboto';
+}
+.nav-rechts {
+    list-style-type: none;
+    grid-column: 3; 
+    grid-row: 7;
+    position: sticky;
+    font-family: 'Roboto';
+}
+
+caption {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: left;
+    padding-top: 3vh;
+    float: inline-start;
+}
+li a{
+  display: block;
+  color: rgb(255, 255, 255);
+  padding: 8px 16px;
+  text-decoration: none;
+}
+li a:hover {
+    color: rgb(255, 0, 0);
+  }
+.header img{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    opacity: 0.5;
+}
+.Summary{
+    color: white;
+    width: 130vh;
+    text-align: left;
+    grid-row: 4;
+    padding-left: 20%;
+}
+.Summary h1{
+    font-size: 64px;
+    font-family: 'Roboto', bold;
+}
+.Summary h2{
+    text-align: right;
+    font-family: 'Roboto', bold;
+    right: 20%;
+}
+.Summary p{
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;;
+    width: 100vh;
+}
+.content{
+    grid-column: 1/3;
+    color: white;
+    text-align: left;
+    width: 100vw;
+    -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+.CaseStudy{
+    grid-column: 1/3;
+    grid-row: 6;
+    position: relative;
+}
+.CaseStudy h1{
+    font-size: 64px;
+    font-family: 'Roboto', bold;
+}
+.Introduction{
+    grid-column: 2;
+    grid-row: 7;
+}
+.Introduction h2{
+    font-size: 30px;
+    text-align: left;
+    font-family: 'Roboto', bold;
+}
+.Introduction p{
+    text-align: left;
+    font-family: 'Roboto', thin;
+    line-height: 1.8;
+    padding-top: 5vh;
+
+}
+.Introduction img{
+    margin-left: 0;
+    padding-top: 10vh;
+    width: 50vw;
+    position: absolute;
+    background-size: cover;
+}
+.Ideation{
+    font-family: 'Roboto', bold;
+    padding-top: 10vh;
+    grid-column: 2;
+    grid-row: 12;
+}
+.Ideation p{
+    padding-top: 5vh;
+}
+.Ideation img{
+    display: block;
+    padding-top: 10vh;
+    float: left;
+    width: 15vw;
+}
+.Persona{
+    float: left;
+    text-align: left;
+    padding-top: 10vh;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    grid-row: 16;
+}
+.Persona h2{
+    font-family: 'Roboto', bold;
+}
+.Persona p{
+    padding-top: 5vh;
+    line-height: 1.8;
+}
+.Persona Img{
+    display: block;
+    float: left;
+    padding-top: 10vh;
+    width: 25vw;
+}
+.DigitalDesign{
+    float: left;
+    text-align: left;
+    padding-top: 10vh;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    grid-row: 21;
+}
+.DigitalDesign p{
+    padding-top: 5vh;
+    line-height: 1.8;
+}
+#carousel{
+    padding-top: 5vh;
+    float: left;
+    overflow-y: hidden;
+    overflow-x: auto;
+    width: 100%;
+    white-space: nowrap;
+}
+#carousel .Fotobanner{
+    display: inline-block;
+}
+
+.Prototyping{
+    float: left;
+    text-align: left;
+    padding-top: 10vh;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    grid-row: 26;
+}
+.Prototyping p{
+    padding-top: 5vh;
+}
+.Prototyping Img{
+    padding-top: 5vh;
+    display: block;
+    width: 10vw;
+}
+.Results{
+    float: left;
+    text-align: left;
+    padding-top: 10vh;
+    font-family: 'Roboto', sans-serif;
+    grid-row: 60;
+}
+.Results p{
+    padding-top: 5vh;
+}
+.Results Img{
+    padding-top: 5vh;
+}

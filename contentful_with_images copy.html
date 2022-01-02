@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            max-width: 100%;
+        }
+        .img-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 1rem;
+        }
+        .split-grid {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" x-data="getData()" x-init="fetchStuff();">
+        <template x-if="content">
+                <div class="project">
+                    <h1 x-text="content.header1"></h1>
+                    <p x-text="content.summary1"></p>
+                    <h1>-----</h1>
+                    <div class="subcontainer">
+                        <div></div>
+                        <p x-text="content.header1"></p>
+                    </div>
+                    <template x-if="images">
+                        <!-- die funktion returnImageURL sucht den passenden url zur bild id -->
+                        <img :src="returnImageURL(images,content.bild1.sys.id)" />
+                    </template>
+                    <h2 x-text="content.header2"></h2>
+                    <h2 x-text="content.header3"></h2>
+                    <p x-text="content.text1"></p>
+                    <img :src="returnImageURL(images,content.bild2.sys.id)" />
+                    <h1 x-text="content.header4"></h1>
+                    <p x-text="content.text2"></p>
+                    <!-- im bild10 ist es ein array, deshalb ein x-for loop -->
+                    <div class="split-grid">
+                        <template x-for="img in content.bild10">
+                            <img :src="returnImageURL(images,img.sys.id)" />
+                        </template>
+                    </div>
+                    <h1 x-text="content.header5"></h1>
+                    <p x-text="content.text3"></p>
+                    <img :src="returnImageURL(images,content.bild4.sys.id)" />
+                    <img :src="returnImageURL(images,content.bild5.sys.id)" />
+                    <h1 x-text="content.header6"></h1>
+                    <p x-text="content.text4"></p>
+                    <div class="img-grid">
+                        <template x-for="img in content.bild6">
+                            <img :src="returnImageURL(images,img.sys.id)" />
+                        </template>
+                    </div>
+                    <h1 x-text="content.header7"></h1>
+                    <p x-text="content.text5"></p>
+                    <img :src="returnImageURL(images,content.bild7.sys.id)" />
+                    <p x-text="content.text6"></p>
+                    <img :src="returnImageURL(images,content.bild8.sys.id)" />
+                    <p x-text="content.text7"></p>
+
+                    
+                </div>
+                </div>
+           
+        </template>
+    </div>
+    
+    <!-- AlpineJS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script>
+        let hash = location.hash.replace("#","");
+        console.log(hash)
+        function getData() {
+            return {
+                content: null,
+                images: null,
+                token: "9LQ6-cB0mn3dXYGsLGlFdxr8KcA_dJfxtrNAdDXGfIo",
+                contenttype: "dcj",
+                page1: "fbp0G8snIPuUBdEAynN5c", // Digital Customer Journey //
+                page2: "6aPLGnDHFeJvL0hexzmvs0", // Herzfroh 2.0 //
+                page3: "6d3ikGxbAOIHsGmP3e9Z0Q", // Tangs Sweets //
+                page4: "2SYItgvh6wGVvEPwPM5Rbu", // SDG //
+                fetchStuff() {
+                    // getting content for specific contenttype
+                    fetch(
+                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/entries/'+this.page1+'?access_token=' +
+                            this.token + "&content_type=" + this.contenttype)
+                        .then(res => res.json())
+                        .then(data => {
+                            this.content = data.fields;
+                        });
+
+                    // getting all assets from contentful and storing them in array this.images
+                    fetch(
+                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/assets?access_token=' +
+                            this.token)
+                        .then(res => res.json())
+                        .then(data => {
+                            this.images = data.items;
+                        });
+                }
+            }
+        }
+
+        function returnImageURL(_image_array, _id) {
+            let image = _image_array.find(element => element.sys.id == _id);
+            return image.fields.file.url;
+        }
+    </script>
+</body>

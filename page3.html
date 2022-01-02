@@ -96,12 +96,14 @@
                 images: null,
                 token: "9LQ6-cB0mn3dXYGsLGlFdxr8KcA_dJfxtrNAdDXGfIo",
                 contenttype: "dcj",
-                page1: "fbp0G8snIPuUBdEAynN5c",
-                page2: "6aPLGnDHFeJvL0hexzmvs0",
+                page1: "fbp0G8snIPuUBdEAynN5c", // Digital Customer Journey //
+                page2: "6aPLGnDHFeJvL0hexzmvs0", // Herzfroh 2.0 //
+                page3: "6d3ikGxbAOIHsGmP3e9Z0Q", // Tangs Sweets //
+                page4: "2SYItgvh6wGVvEPwPM5Rbu", // SDG //
                 fetchStuff() {
                     // getting content for specific contenttype
                     fetch(
-                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/entries/'+this.page1+'?access_token=' +
+                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/entries/'+this.page3+'?access_token=' +
                             this.token + "&content_type=" + this.contenttype)
                         .then(res => res.json())
                         .then(data => {
