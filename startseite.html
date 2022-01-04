@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/startseite.css">
+    <link href="link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <section class="content container" x-data="getData()" x-init="fetchStuff();">
+        <template x-if="content">
+                <div class="container">
+
+                    <div class="header container">
+                        <nav>
+                            <a href="index.html">Shiying Portfolio 21'</a>
+                            <a href="about.html">About</a>
+                        </nav>
+
+                        <template x-if="images">
+                            <!-- die funktion returnImageURL sucht den passenden url zur bild id -->
+                            <img :src="returnImageURL(images,content.bild1.sys.id)" />
+                         </template>
+
+                        <div class="Summary">
+                            <table>
+                                <tr>
+                            <th><h1 x-text="content.header1"></h1></th>
+                            <th><h2 x-text="content.bio"></h2></th>
+                                </tr>
+                            <!--<td><p x-text="content.summary1"></p></td>
+                            <td><p x-text="content.kategorie"></p></td>-->
+                                
+                        </table>
+                        </div>
+                    </div>
+
+                    <div class="CaseStudy">
+                        <h1 x-text="content.projecttitel"></h1>
+                    </div>
+
+                    <div class="projekte">
+                        <h2 x-text="content.casestudytitel"></h2>
+                        <h2 x-text="content.project1"></h2>
+                        <h2 x-text="content.project2"></h2>
+                        <h2 x-text="content.project3"></h2>
+                        <h2 x-text="content.project4"></h2>
+                        <!--<ul>
+                            <li><a href="#Introduction">Introduction</a></li>
+                            <li><a href="#IdeationPhase">Ideation Phase</a></li>
+                            <li><a href="#DigitalDesign">Digital Design</a></li>
+                            <li><a href="#Prototyping">Prototyping</a></li>
+                            <li><a href="#Results">Results</a></li>
+                        </ul>-->
+                    </div>
+
+                    <!--<div class="nav-rechts">
+                        <table>
+                        
+                            <tr>
+                                <th>INFO</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td>Website</td>
+                                <td><li><a href="https://www.hslu.ch/de-ch/hochschule-luzern/forschung/projekte/detail/?pid=5902" target="_blank">DCJ.ch</a></li></td>
+                            </tr>
+                            <tr>
+                                <td>Dauer</td>
+                                <td>Februar 2021 - weiterführend</td>
+                            </tr>
+                            <caption>
+                                <h2>TOOLS</h2>
+                                <p>Figma</p>
+                                <p>Miro</p>
+                                <p>Adobe Photoshop</p>
+                                <p>Adobe Illustrator</p>
+                            </caption>
+                            <caption>
+                                <h2>DISCIPLINE</h2>
+                                <p>Art Direction</p>
+                                <p>UX Research</p>
+                                <p>UI Design</p>
+                                <p>Prototyping</p>
+                                <p>Testing</p>
+                            </caption>
+                        </table>
+                    </div>-->
+
+                    <div class="end">
+                        <!--<section id="Introduction"></section>-->
+                        <h2 x-text="content.letsgetintouch"></h2>
+                        <p x-text="content.ending"></p>
+                        <!--<img :src="returnImageURL(images,content.bild2.sys.id)" />-->
+                    </div>
+
+                    <div class="resume">
+                        <!--<section id="IdeationPhase"></section>-->
+                    <h2 x-text="content.resume"></h2>
+
+                    <div class="fuss">
+                        <!--<section id="IdeationPhase"></section>-->
+                        <img :src="returnImageURL(images,content.fuss.sys.id)" />
+
+                    <!--<p x-text="content.text8"></p>-->
+                    <!-- im bild10 ist es ein array, deshalb ein x-for loop -->
+                    <!--<div class="split-grid">
+                        <template x-for="img in content.bild10">
+                            <img :src="returnImageURL(images,img.sys.id)" />
+                        </template>
+                    </div>
+                </div>
+
+                <div class="Persona grid-2">
+                    <h1 x-text="content.header5"></h1>
+                    <p x-text="content.text3"></p>
+                    <img :src="returnImageURL(images,content.bild4.sys.id)" />
+                    <img :src="returnImageURL(images,content.bild5.sys.id)" />
+                </div>
+
+                <div class="DigitalDesign grid-2">
+                    <section id="DigitalDesign"></section>
+                    <h1 x-text="content.header6"></h1>
+                    <p x-text="content.text4"></p>
+                    <div id="carousel">
+                    <div class="Fotobanner">
+                        <template x-for="img in content.bild6">
+                            <img :src="returnImageURL(images,img.sys.id)" />
+                        </template>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="Prototyping grid-2">
+                    <section id="Prototyping"></section>
+                    <h1 x-text="content.header7"></h1>
+                    <p x-text="content.text5"></p>
+                    <img :src="returnImageURL(images,content.bild7.sys.id)" />
+                    <p x-text="content.text6"></p>
+                    <img :src="returnImageURL(images,content.bild8.sys.id)" />
+                </div>
+
+                <div class="Results grid-2">
+                    <section id="Results"></section>
+                    <h1 x-text="content.header8"></h1>
+                    <p x-text="content.text7"></p>
+                    <template x-for="img in content.bild11">
+                        <img :src="returnImageURL(images,img.sys.id)" />
+                    </template>
+                </div> -->
+
+                    
+                </div>
+                </div>
+           
+        </template>
+    </section>
+    
+    <!-- AlpineJS -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script>
+        let hash = location.hash.replace("#","");
+        console.log(hash)
+        function getData() {
+            return {
+                content: null,
+                images: null,
+                token: "9LQ6-cB0mn3dXYGsLGlFdxr8KcA_dJfxtrNAdDXGfIo",
+                contenttype: "dcj",
+                contenttype1: "startseite",
+                contenttype2: "aboutMe",
+                page1: "fbp0G8snIPuUBdEAynN5c", // Digital Customer Journey //
+                page2: "6aPLGnDHFeJvL0hexzmvs0", // Herzfroh 2.0 //
+                page3: "6d3ikGxbAOIHsGmP3e9Z0Q", // Tangs Sweets //
+                page4: "2SYItgvh6wGVvEPwPM5Rbu", // SDG //
+                page5: "YduehITjLS7T5fXmrAi7w",  // Startseite //
+                page6: "5x6xgwzQD70VAy0oYsQdd1", // About Me //
+                fetchStuff() {
+                    // getting content for specific contenttype
+                    fetch(
+                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/entries/'+this.page5+'?access_token=' +
+                            this.token + "&content_type=" + this.contenttype1)
+                        .then(res => res.json())
+                        .then(data => {
+                            this.content = data.fields;
+                        });
+
+                    // getting all assets from contentful and storing them in array this.images
+                    fetch(
+                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/assets?access_token=' +
+                            this.token)
+                        .then(res => res.json())
+                        .then(data => {
+                            this.images = data.items;
+                        });
+                }
+            }
+        }
+
+        function returnImageURL(_image_array, _id) {
+            let image = _image_array.find(element => element.sys.id == _id);
+            return image.fields.file.url;
+        }
+    </script>
+</body>
