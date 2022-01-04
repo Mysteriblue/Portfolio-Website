@@ -23,6 +23,10 @@
                             <a href="about.html">About</a>
                         </nav>
 
+                        <div class="status">
+                            <p>Available for new collaborations</p>
+                        </div>
+
                         <template x-if="images">
                             <!-- die funktion returnImageURL sucht den passenden url zur bild id -->
                             <img :src="returnImageURL(images,content.bild1.sys.id)" />
@@ -93,67 +97,55 @@
                         </table>
                     </div>-->
 
-                    <div class="end">
-                        <!--<section id="Introduction"></section>-->
+                    <!--<div class="end">
+                        <section id="Introduction"></section>
                         <h2 x-text="content.letsgetintouch"></h2>
                         <p x-text="content.ending"></p>
-                        <!--<img :src="returnImageURL(images,content.bild2.sys.id)" />-->
-                    </div>
+                        <img :src="returnImageURL(images,content.bild2.sys.id)" />
+                    </div>-->
 
                     <div class="resume">
                         <!--<section id="IdeationPhase"></section>-->
                     <h2 x-text="content.resume"></h2>
 
-                    <div class="fuss">
-                        <!--<section id="IdeationPhase"></section>-->
-                        <img :src="returnImageURL(images,content.fuss.sys.id)" />
+                    <!--<div class="fuss">
+                        <section id="IdeationPhase"></section>
+                        <img :src="returnImageURL(images,content.fuss.sys.id)" />-->
 
-                    <!--<p x-text="content.text8"></p>-->
-                    <!-- im bild10 ist es ein array, deshalb ein x-for loop -->
-                    <!--<div class="split-grid">
-                        <template x-for="img in content.bild10">
-                            <img :src="returnImageURL(images,img.sys.id)" />
-                        </template>
+
+                <div class="footer">
+
+                    <div class="end">
+                        <h1>Lets Get in Touch</h1>
+                        <br>
+                        <p>Feel free to get in touch with me when you have a project on your mind or just say hi. I don’t mind making new friends</p>
+                        </div>
+
+                        <div class="resume">
+                            <p>Resume</p>
+                            <a href="path_to_file" download="CV.pdf">Download</a>
+                        </div>
+                    
+
+                    <div class="links">
+                        <img src="/Bilder/Brille.svg">
+                        <p>Open to Relocation & Working Remotley</p>
                     </div>
-                </div>
 
-                <div class="Persona grid-2">
-                    <h1 x-text="content.header5"></h1>
-                    <p x-text="content.text3"></p>
-                    <img :src="returnImageURL(images,content.bild4.sys.id)" />
-                    <img :src="returnImageURL(images,content.bild5.sys.id)" />
-                </div>
+                    <div class="mitte">
+                        <p>Say Hi!</p>
 
-                <div class="DigitalDesign grid-2">
-                    <section id="DigitalDesign"></section>
-                    <h1 x-text="content.header6"></h1>
-                    <p x-text="content.text4"></p>
-                    <div id="carousel">
-                    <div class="Fotobanner">
-                        <template x-for="img in content.bild6">
-                            <img :src="returnImageURL(images,img.sys.id)" />
-                        </template>
+                        <div class="mail">
+                            <a href="mailto:shiying23@hotmail.com">shiying23@hotmail.com</a>
+                            <img src="/Bilder/mailbtn.svg">
+                        </div>
+
                     </div>
+
+                    <div class="rechts">
+                        <p>Lets be friends</p>
                     </div>
-                </div>
-
-                <div class="Prototyping grid-2">
-                    <section id="Prototyping"></section>
-                    <h1 x-text="content.header7"></h1>
-                    <p x-text="content.text5"></p>
-                    <img :src="returnImageURL(images,content.bild7.sys.id)" />
-                    <p x-text="content.text6"></p>
-                    <img :src="returnImageURL(images,content.bild8.sys.id)" />
-                </div>
-
-                <div class="Results grid-2">
-                    <section id="Results"></section>
-                    <h1 x-text="content.header8"></h1>
-                    <p x-text="content.text7"></p>
-                    <template x-for="img in content.bild11">
-                        <img :src="returnImageURL(images,img.sys.id)" />
-                    </template>
-                </div> -->
+                </div> 
 
                     
                 </div>
