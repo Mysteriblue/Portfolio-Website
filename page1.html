@@ -17,16 +17,12 @@
         <template x-if="content">
                 <div class="container">
 
+
                     <div class="header container">
                         <nav>
                             <a href="index.html">Shiying Portfolio 21'</a>
                             <a href="about.html">About</a>
                         </nav>
-
-                        <template x-if="images">
-                            <!-- die funktion returnImageURL sucht den passenden url zur bild id -->
-                            <img :src="returnImageURL(images,content.bild1.sys.id)" />
-                         </template>
 
                         <div class="Summary">
                             <table>
@@ -39,13 +35,24 @@
                                 
                         </table>
                         </div>
+
+                        <div class="bild1 grossbilder">
+                            <template x-if="images">
+                             <!-- die funktion returnImageURL sucht den passenden url zur bild id -->
+                                <img :src="returnImageURL(images,content.bild1.sys.id)" />
+                             </template>
+                        </div>
+
+                    
                     </div>
 
                     <div class="CaseStudy">
                         <h1 x-text="content.header2"></h1>
                     </div>
 
-                    <div class="nav-links">Deliverables
+                    <div class="nav-links">
+                        <div class="sidebar">
+                        <p>Deliverables</p>
                         <ul>
                             <li><a href="#Introduction">Introduction</a></li>
                             <li><a href="#IdeationPhase">Ideation Phase</a></li>
@@ -53,11 +60,14 @@
                             <li><a href="#Prototyping">Prototyping</a></li>
                             <li><a href="#Results">Results</a></li>
                         </ul>
+                        </div>
                     </div>
 
                     <div class="nav-rechts">
-                        <table>
                         
+                        
+                            <div class="floating info">
+                                <table>
                             <tr>
                                 <th>INFO</th>
                                 <th></th>
@@ -70,30 +80,42 @@
                                 <td>Dauer</td>
                                 <td>Februar 2021 - weiterführend</td>
                             </tr>
-                            <caption>
-                                <h2>TOOLS</h2>
-                                <p>Figma</p>
-                                <p>Miro</p>
-                                <p>Adobe Photoshop</p>
-                                <p>Adobe Illustrator</p>
-                            </caption>
-                            <caption>
-                                <h2>DISCIPLINE</h2>
-                                <p>Art Direction</p>
-                                <p>UX Research</p>
-                                <p>UI Design</p>
-                                <p>Prototyping</p>
-                                <p>Testing</p>
-                            </caption>
-                        </table>
+                            </table>
+                            </div>
+
+                            <div class="floating list">
+                            <ul>
+                                <li><h2>TOOLS</h2></li>
+                                <li><p>Figma</p></li>
+                                <li><p>Miro</p></li>
+                                <li><p>Adobe Photoshop</p></li>
+                                <li><p>Adobe Illustrator</p></li>
+                            </ul>
+                            </div>
+                            <div class="floating list">
+                            <ul>
+                                <li><h2>DISCIPLINE</h2></li>
+                                <li><p>Art Direction</p></li>
+                                <li><p>UX Research</p></li>
+                                <li><p>UI Design</p></li>
+                                <li><p>Prototyping</p></li>
+                                <li><p>Testing</p></li>
+                            </ul>
+                        </div>
+                        
                     </div>
 
-                    <div class="Introduction grid-2">
-                        <section id="Introduction"></section>
-                        <h2 x-text="content.header3"></h2>
-                        <p x-text="content.text1"></p>
-                        <img :src="returnImageURL(images,content.bild2.sys.id)" />
-                    </div>
+                    <!--<div class="middle container">-->
+
+                        <div class="Introduction grid-2">
+                            <section id="Introduction"></section>
+                            <h2 x-text="content.header3"></h2>
+                            <p x-text="content.text1"></p>
+                        </div>
+
+                        <div class="bild2 grossbilder">
+                            <img :src="returnImageURL(images,content.bild2.sys.id)" />
+                        </div>
 
                     <div class="Ideation grid-2">
                         <section id="IdeationPhase"></section>
@@ -118,12 +140,16 @@
                     <section id="DigitalDesign"></section>
                     <h1 x-text="content.header6"></h1>
                     <p x-text="content.text4"></p>
+                </div>
+
+                <div class="Fotobanner">
                     <div id="carousel">
-                    <div class="Fotobanner">
-                        <template x-for="img in content.bild6">
-                            <img :src="returnImageURL(images,img.sys.id)" />
-                        </template>
-                    </div>
+                        <article>
+                            <template x-for="img in content.bild6">
+                                <li><img :src="returnImageURL(images,img.sys.id)" /></li>
+                             </template>
+                             
+                        </article>
                     </div>
                 </div>
 
@@ -131,8 +157,16 @@
                     <section id="Prototyping"></section>
                     <h1 x-text="content.header7"></h1>
                     <p x-text="content.text5"></p>
-                    <img :src="returnImageURL(images,content.bild7.sys.id)" />
+                    
                     <p x-text="content.text6"></p>
+                    
+                </div>
+
+                <div class="bild3 grossbilder">
+                    <img :src="returnImageURL(images,content.bild7.sys.id)" />
+                </div>
+
+                <div class="bild4 grossbilder">
                     <img :src="returnImageURL(images,content.bild8.sys.id)" />
                 </div>
 
@@ -140,10 +174,55 @@
                     <section id="Results"></section>
                     <h1 x-text="content.header8"></h1>
                     <p x-text="content.text7"></p>
+                </div>
+
+                <div class="bild5 grossbilder">
                     <template x-for="img in content.bild11">
                         <img :src="returnImageURL(images,img.sys.id)" />
                     </template>
                 </div>
+
+                <div class="danke grid-2">
+                    <h1>Thank you for scrolling!</h1>
+                </div>
+
+
+                <div class="nextstudies">
+                    <img src="/Portfolio-Website/Bilder/"
+                </div>
+                <div class="footer">
+
+                    <div class="end">
+                        <h1>Lets Get in Touch</h1>
+                        <br>
+                        <p>Feel free to get in touch with me when you have a project on your mind or just say hi. I don’t mind making new friends</p>
+                        </div>
+
+                        <div class="resume">
+                            <p>Resume</p>
+                            <a href="path_to_file" download="CV.pdf">Download</a>
+                        </div>
+                    
+
+                    <div class="links untenfooter">
+                        <img src="/Bilder/Brille.svg">
+                        <p>Open to Relocation & Working Remotley</p>
+                    </div>
+
+                    <div class="mitte untenfooter">
+                        <p>Say Hi!</p>
+
+                        <div class="mail">
+                            <a href="mailto:shiying23@hotmail.com">shiying23@hotmail.com</a>
+                            <img src="/Bilder/mailbtn.svg">
+                        </div>
+
+                    </div>
+
+                    <div class="rechts untenfooter">
+                        <p>Lets be friends</p>
+                    </div>
+                </div> 
 
                     
                 </div>
