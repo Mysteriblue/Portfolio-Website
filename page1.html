@@ -25,11 +25,16 @@
                         </nav>
 
                         <div class="Summary">
+                            
                             <table>
-                                <tr>
-                            <th><h1 x-text="content.header1"></h1></th>
-                            <th><h2 x-text="content.datum"></h2></th>
-                                </tr>
+                                
+                                    <tr>
+                                    
+                                        <th><h1 x-text="content.header1"></h1></th>
+                                        <th><h1 x-text="content.datum"></h1></th>
+                                    
+                                    </tr>
+                           
                             <td><p x-text="content.summary1"></p></td>
                             <td><p x-text="content.kategorie"></p></td>
                                 
@@ -143,14 +148,12 @@
                 </div>
 
                 <div class="Fotobanner">
-                    <div id="carousel">
-                        <article>
+                        <article class="carousel" id="carousel">
                             <template x-for="img in content.bild6">
                                 <li><img :src="returnImageURL(images,img.sys.id)" /></li>
                              </template>
                              
                         </article>
-                    </div>
                 </div>
 
                 <div class="Prototyping grid-2">
@@ -188,7 +191,14 @@
 
 
                 <div class="nextstudies">
-                    <img src="/Portfolio-Website/Bilder/"
+                    <article class="herzfroh floating list">
+                        <img src="/Portfolio-Website/Bilder/Herzfroh/112.jpg">
+                    </article>
+                    <article class="tang floating list">
+                        <img src="/Portfolio-Website/Bilder/Tangs_Sweets/34.jpg">
+                    </article>
+                </div>
+                
                 </div>
                 <div class="footer">
 
