@@ -24,6 +24,13 @@
                             <a href="about.html">About</a>
                         </nav>
 
+                        <div class="status">
+                            <div class="circle"></div>
+                            <div class="statusp">
+                            <p>Available for new collaborations</p>
+                        </div>
+                        </div>
+
                         <div class="Summary">
                             
                             <table>
@@ -39,16 +46,14 @@
                             <td><p x-text="content.kategorie"></p></td>
                                 
                         </table>
-                        </div>
+                    </div>
+                    </div>
 
-                        <div class="bild1 grossbilder">
-                            <template x-if="images">
-                             <!-- die funktion returnImageURL sucht den passenden url zur bild id -->
-                                <img :src="returnImageURL(images,content.bild1.sys.id)" />
-                             </template>
-                        </div>
-
-                    
+                    <div class="bild1 grossbilder">
+                        <template x-if="images">
+                         <!-- die funktion returnImageURL sucht den passenden url zur bild id -->
+                            <img :src="returnImageURL(images,content.bild1.sys.id)" />
+                         </template>
                     </div>
 
                     <div class="CaseStudy">
@@ -191,15 +196,26 @@
 
 
                 <div class="nextstudies">
-                    <article class="herzfroh floating list">
-                        <img src="/Portfolio-Website/Bilder/Herzfroh/112.jpg">
-                    </article>
-                    <article class="tang floating list">
-                        <img src="/Portfolio-Website/Bilder/Tangs_Sweets/34.jpg">
-                    </article>
+                    <h1>How about the</h1>
+                    <br>
+                    <h1>Next Case Study?</h1>
+
+                    <div class="herzfroh floating list">
+                        <a href="page2.html">
+                            <img src="/Portfolio-Website/Bilder/Herzfroh/112.jpg">
+                            <p>Herzfroh 2.0 - UX/UI Design</p>
+                        </a>
+                    </div>
+
+                    <div class="tang floating list">
+                        <a href="page3.html">
+                            <img src="/Portfolio-Website/Bilder/Tangs_Sweets/34.jpg">
+                            <p>Tangs Sweets - Visual Design</p>
+                        </a>
+                    </div>
                 </div>
                 
-                </div>
+              
                 <div class="footer">
 
                     <div class="end">
@@ -209,29 +225,34 @@
                         </div>
 
                         <div class="resume">
-                            <p>Resume</p>
-                            <a href="path_to_file" download="CV.pdf">Download</a>
+                            <a href="path_to_file" download="CV.pdf">Resume Download</a>
                         </div>
                     
 
                     <div class="links untenfooter">
-                        <img src="/Bilder/Brille.svg">
-                        <p>Open to Relocation & Working Remotley</p>
+                        <img src="/Portfolio-Website/Bilder/Brille.svg">
+                        <p>Open to Relocation &</p>
+                            <p>Working Remotley</p>
                     </div>
 
                     <div class="mitte untenfooter">
                         <p>Say Hi!</p>
-
+                        <br>
                         <div class="mail">
                             <a href="mailto:shiying23@hotmail.com">shiying23@hotmail.com</a>
-                            <img src="/Bilder/mailbtn.svg">
+                            <img src="/Portfolio-Website/Bilder/mailbtn.svg">
                         </div>
 
                     </div>
 
                     <div class="rechts untenfooter">
                         <p>Lets be friends</p>
+                        <div class="socialmedia">
+                        <a href="https://www.instagram.com/luv_shiying/" target="_blank"><img src="/Portfolio-Website/Bilder/Icons/Insta.svg"></a>
+                        <a href="https://www.linkedin.com/in/shiying-su-33b4591b9/" target="_blank"><img src="/Portfolio-Website/Bilder/Icons/Linkedin.svg"></a>
+                        <a href="https://www.behance.net/shiyingsuu" target="_blank"><img src="/Portfolio-Website/Bilder/Icons/Behance.svg"></a>
                     </div>
+                </div>
                 </div> 
 
                     

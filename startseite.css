@@ -6,12 +6,20 @@ html {
     scroll-behavior: smooth; 
 } 
 .status{
+  display: block;
+  float: left;
+}
+.statusp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle{
     height: 10px;
   width: 10px;
   background-color: rgb(0, 255, 21);
   border-radius: 50%;
   display: flex;
-  flex-direction: column;
 }
 img{
     max-width: 100%;
