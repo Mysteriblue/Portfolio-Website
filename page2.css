@@ -44,7 +44,7 @@ img{
 .container{
     display: grid;
     grid-template-columns: 18% 50% 25%;
-    grid-template-rows: repeat(61, 20vh);
+    grid-template-rows: repeat(58, 20vh);
     column-gap: 3vw;
     row-gap: 2vh;
     width: 100vw;
@@ -253,7 +253,7 @@ li a:hover {
     padding-top: 10vh;
     display: block;
     font-family: 'Roboto', sans-serif;
-    grid-row: 22;
+    grid-row: 23;
 }
 .Persona h2{
     font-family: 'Roboto', bold;
@@ -278,6 +278,17 @@ li a:hover {
 .DigitalDesign p{
     padding-top: 5vh;
     line-height: 1.8;
+}
+.bild9{
+    grid-row: 24;
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: row;
+}
+.bild10{
+    grid-row: 29;
+    grid-column: 1/4;
+    padding: 0vh 30vh 0vh;
 }
 .carousel{
     display: flex;
@@ -317,21 +328,28 @@ li a:hover {
     text-align: left;
     display: block;
     font-family: 'Roboto', sans-serif;
-    grid-row: 31;
+    grid-row: 34;
 }
 .Prototyping p{
     padding-top: 5vh;
     line-height: 1.5;
 }
+.bild11{
+    grid-row: 36;
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .bild3{
     grid-column: 1/4;
-    grid-row: 33;
+    grid-row: 38;
     width: 100vw;
     height: 100%;
     padding: 0vh 30vh;
 }
 .bild4{
-    grid-row: 38;
+    grid-row: 43;
     grid-column: 1/4;
 }
 .Results{
@@ -339,7 +357,7 @@ li a:hover {
     text-align: left;
     padding-top: 10vh;
     font-family: 'Roboto', sans-serif;
-    grid-row: 44;
+    grid-row: 48;
 }
 .Results p{
     padding-top: 5vh;
@@ -354,7 +372,7 @@ li a:hover {
     flex-direction: column;
 }
 .danke{
-    grid-row: 52;
+    grid-row: 50;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -362,7 +380,7 @@ li a:hover {
     font-size: 30px;
 }
 .nextstudies{
-    grid-row: 54; 
+    grid-row: 51; 
     grid-column: 1/4;
     width: 70%;
     font-family: 'Roboto';
@@ -439,7 +457,7 @@ li a:hover {
 }
 .footer{
     position: relative;
-    grid-row: 58;
+    grid-row: 55;
     grid-column: 1/4;
     height: 30vh;
     padding: 15vh 0vh 20vh;

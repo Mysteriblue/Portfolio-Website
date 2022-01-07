@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Portfolio-Website/main.css">
+    <link rel="stylesheet" href="/Portfolio-Website/page2.css">
     <link href="link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -67,7 +67,7 @@
                             <li><a href="#IdeationPhase">Ideation Phase</a></li>
                             <li><a href="#DigitalDesign">Digital Design</a></li>
                             <li><a href="#Prototyping">Prototyping</a></li>
-                            <li><a href="#Results">Results</a></li>
+                            <li><a href="#Results">Next Steps</a></li> 
                         </ul>
                     </div>
 
@@ -82,11 +82,11 @@
                             </tr>
                             <tr>
                                 <td>Website</td>
-                                <td><li><a href="https://www.hslu.ch/de-ch/hochschule-luzern/forschung/projekte/detail/?pid=5902" target="_blank">DCJ.ch</a></li></td>
+                                <td><li><a href="https://www.hslu.ch/de-ch/hochschule-luzern/forschung/projekte/detail/?pid=4138" target="_blank">Herzfroh.ch</a></li></td>
                             </tr>
                             <tr>
                                 <td>Dauer</td>
-                                <td>Februar 2021 - weiterführend</td>
+                                <td>December 2020 - continued</td>
                             </tr>
                             </table>
                             </div>
@@ -103,7 +103,6 @@
                             <div class="floating list">
                             <ul>
                                 <li><h2>DISCIPLINE</h2></li>
-                                <li><p>Art Direction</p></li>
                                 <li><p>UX Research</p></li>
                                 <li><p>UI Design</p></li>
                                 <li><p>Prototyping</p></li>
@@ -129,12 +128,12 @@
                         <section id="IdeationPhase"></section>
                     <h1 x-text="content.header4"></h1>
                     <p x-text="content.text8"></p>
-                    <!-- im bild10 ist es ein array, deshalb ein x-for loop -->
-                    <div class="split-grid">
-                        <template x-for="img in content.bild10">
-                            <img :src="returnImageURL(images,img.sys.id)" />
-                        </template>
-                    </div>
+                </div>
+
+                <div class="bild8 grossbilder">
+                    <template x-for="img in content.bild10">
+                        <img :src="returnImageURL(images,img.sys.id)" />
+                    </template>
                 </div>
 
                 <div class="Persona grid-2">
@@ -144,19 +143,22 @@
                     <img :src="returnImageURL(images,content.bild5.sys.id)" />
                 </div>
 
+                <div class="bild9 grossbilder">
+                    <template x-for="img in content.bilder">
+                        <img :src="returnImageURL(images,img.sys.id)" />
+                    </template>
+                </div>
+
                 <div class="DigitalDesign grid-2">
                     <section id="DigitalDesign"></section>
                     <h1 x-text="content.header6"></h1>
                     <p x-text="content.text4"></p>
                 </div>
 
-                <div class="Fotobanner">
-                        <article class="carousel" id="carousel">
-                            <template x-for="img in content.bild6">
-                                <li><img :src="returnImageURL(images,img.sys.id)" /></li>
-                             </template>
-                             
-                        </article>
+                <div class="bild10 grossbilder">
+                <template x-for="img in content.bild6">
+                    <li><img :src="returnImageURL(images,img.sys.id)" /></li>
+                 </template>
                 </div>
 
                 <div class="Prototyping grid-2">
@@ -167,6 +169,12 @@
                     <p x-text="content.text6"></p>
                     
                 </div>
+
+                <div class="bild11 grossbilder">
+                    <template x-for="img in content.bilder1">
+                        <li><img :src="returnImageURL(images,img.sys.id)" /></li>
+                     </template>
+                    </div>
 
                 <div class="bild3 grossbilder">
                     <img :src="returnImageURL(images,content.bild7.sys.id)" />
@@ -198,16 +206,16 @@
                     <br>
                     <h1>Next Case Study?</h1>
 
-                    <div class="herzfroh floating list">
-                        <a href="page2.html">
-                            <img src="/Portfolio-Website/Bilder/Herzfroh/112.jpg">
-                            <p>Herzfroh 2.0 - UX/UI Design</p>
+                    <div class="sdg floating list">
+                        <a href="page4.html">
+                            <img src="/Portfolio-Website/Bilder/Data_Vizualitation/footerbild.jpg">
+                            <p>SDG Goals - Data Visualization</p>
                         </a>
                     </div>
 
                     <div class="tang floating list">
                         <a href="page3.html">
-                            <img src="/Portfolio-Website/Bilder/Tangs_Sweets/34.jpg">
+                            <img src="/Portfolio-Website/Bilder/Tangs_Sweets/footerbild.jpg">
                             <p>Tangs Sweets - Visual Design</p>
                         </a>
                     </div>
