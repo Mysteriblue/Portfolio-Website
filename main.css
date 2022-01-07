@@ -8,6 +8,11 @@ html {
 img{
     max-width: 100%;
 }
+.sticky {
+    position: sticky;
+    top: 0;
+    width: 100%
+  }
 .status{
     display: flex;
     flex-direction: row;
@@ -39,7 +44,7 @@ img{
 .container{
     display: grid;
     grid-template-columns: 18% 50% 25%;
-    grid-template-rows: repeat(62, 20vh);
+    grid-template-rows: repeat(61, 20vh);
     column-gap: 3vw;
     row-gap: 2vh;
     width: 100vw;
@@ -124,17 +129,6 @@ font-family: 'Roboto';
 nav a:hover {
     color: rgb(174, 0, 243);
   }
-.sidebar {
-    --offset: var(--space);
-    flex-grow: 1;
-    flex-basis: 300px;
-    align-self: start;
-    position: sticky;
-    top: var(--offset);
-}
-.sidebar .nav-links {
-    max-height: calc(100vh - var(--offset) * 2);
-  }
 .nav-links {
     width: 200px;
     grid-column: 1; 
@@ -199,6 +193,7 @@ li a:hover {
     grid-column: 1/3;
     grid-row: 7;
     position: relative;
+    padding: 0vh 5vh 0vh;
 }
 .CaseStudy h1{
     font-size: 64px;
@@ -381,6 +376,13 @@ li a:hover {
     text-decoration-line: overline underline; 
     padding: 3vh 0vh 0vh;
 }
+.herzfroh a{
+    text-decoration: none;
+    color: white;
+}
+.herzfroh a:hover{
+    color: rgb(174, 0, 243);
+}
 .herzfroh{
     width: 25vw;
     height: 15vh;
@@ -389,7 +391,13 @@ li a:hover {
     width: 35vw;
     height: 10vh;
 }
-
+.tang a{
+    text-decoration: none;
+    color: white;
+}
+.tang a:hover{
+    color: rgb(174, 0, 243);
+}
 .end{
     padding: 5vh;
     line-height: 3vh;
@@ -420,6 +428,9 @@ li a:hover {
     color: white;
     width: 23vw;
     word-spacing: 15vw;
+}
+.resume a:hover{
+    color: rgb(174, 0, 243);
 }
 .footer{
     position: relative;
@@ -483,7 +494,7 @@ li a:hover {
     color: white;
 }
 .mail a:hover{
-    color: color: rgb(174, 0, 243);
+    color: rgb(174, 0, 243);
 }
 .mail img{
     height: 2vh;

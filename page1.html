@@ -60,8 +60,7 @@
                         <h1 x-text="content.header2"></h1>
                     </div>
 
-                    <div class="nav-links">
-                        <div class="sidebar">
+                    <div class="nav-links sticky" id="sticky">
                         <p>Deliverables</p>
                         <ul>
                             <li><a href="#Introduction">Introduction</a></li>
@@ -70,10 +69,9 @@
                             <li><a href="#Prototyping">Prototyping</a></li>
                             <li><a href="#Results">Results</a></li>
                         </ul>
-                        </div>
                     </div>
 
-                    <div class="nav-rechts">
+                    <div class="nav-rechts sticky" id="sticky">
                         
                         
                             <div class="floating info">
@@ -264,7 +262,7 @@
     
     <!-- AlpineJS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
+    <script src="./page1.js"></script>
     <script>
         let hash = location.hash.replace("#","");
         console.log(hash)
