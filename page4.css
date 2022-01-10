@@ -345,6 +345,21 @@ li a:hover {
     text-decoration-line: overline underline; 
     padding: 3vh 0vh 0vh;
 }
+.dcj{
+    width: 32vw;
+    height: 10vh;
+}
+.dcj p{
+    text-decoration-line: overline underline; 
+    padding: 3vh 0vh 0vh;
+}
+.dcj a{
+    text-decoration: none;
+    color: white;
+}
+.dcj a:hover{
+    color: rgb(174, 0, 243);
+}
 .herzfroh p{
     text-decoration-line: overline underline; 
     padding: 3vh 0vh 0vh;
@@ -357,7 +372,7 @@ li a:hover {
     color: rgb(174, 0, 243);
 }
 .herzfroh{
-    width: 25vw;
+    width: 32vw;
     height: 15vh;
 }
 .tang{
