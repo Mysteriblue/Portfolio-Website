@@ -118,6 +118,21 @@ body {
     background-size: cover;
     grid-column: 1/4;
 }
+.bilder{
+    grid-column: 1/4;
+    grid-row: 1/5;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-wrap: nowrap;
+    opacity: 0;
+    z-index: -1;
+}
+#dcj:hover{
+    opacity: 1;
+    z-index: 1;
+}
 .bild1{
     opacity: 0.5;
     height: 100%;
@@ -139,6 +154,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-row: 1;
+    grid-column: 1;
 }
 .projekte a{
     text-decoration: none;
