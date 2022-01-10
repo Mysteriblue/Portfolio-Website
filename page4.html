@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Portfolio-Website/main.css">
+    <link rel="stylesheet" href="/Portfolio-Website/page4.css">
     <link href="link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -64,10 +64,9 @@
                         <p>Deliverables</p>
                         <ul>
                             <li><a href="#Introduction">Introduction</a></li>
-                            <li><a href="#IdeationPhase">Ideation Phase</a></li>
-                            <li><a href="#DigitalDesign">Digital Design</a></li>
-                            <li><a href="#Prototyping">Prototyping</a></li>
-                            <li><a href="#Results">Results</a></li>
+                            <li><a href="#IdeationPhase">Research</a></li>
+                            <li><a href="#DigitalDesign">Sketch</a></li>
+                            <li><a href="#Prototyping">Final Product</a></li>
                         </ul>
                     </div>
 
@@ -82,11 +81,11 @@
                             </tr>
                             <tr>
                                 <td>Website</td>
-                                <td><li><a href="https://www.hslu.ch/de-ch/hochschule-luzern/forschung/projekte/detail/?pid=5902" target="_blank">DCJ.ch</a></li></td>
+                                <td><li><a href="https://www.instagram.com/p/CPndU-kgvAd/" target="_blank">Poster Link</a></li></td>
                             </tr>
                             <tr>
-                                <td>Dauer</td>
-                                <td>Februar 2021 - weiterführend</td>
+                                <td>Duration</td>
+                                <td>3 Weeks</td>
                             </tr>
                             </table>
                             </div>
@@ -94,20 +93,18 @@
                             <div class="floating list">
                             <ul>
                                 <li><h2>TOOLS</h2></li>
-                                <li><p>Figma</p></li>
-                                <li><p>Miro</p></li>
-                                <li><p>Adobe Photoshop</p></li>
                                 <li><p>Adobe Illustrator</p></li>
+                                <li><p>Adobe Indesign</p></li>
+                                <li><p>Office Excel</p></li>
+                                <li><p>Tableau</p></li>
                             </ul>
                             </div>
                             <div class="floating list">
                             <ul>
                                 <li><h2>DISCIPLINE</h2></li>
-                                <li><p>Art Direction</p></li>
-                                <li><p>UX Research</p></li>
-                                <li><p>UI Design</p></li>
-                                <li><p>Prototyping</p></li>
-                                <li><p>Testing</p></li>
+                                <li><p>Visual Design</p></li>
+                                <li><p>Data Visualization</p></li>
+                                <li><p>Data Research</p></li>
                             </ul>
                         </div>
                         
@@ -127,65 +124,39 @@
 
                     <div class="Ideation grid-2">
                         <section id="IdeationPhase"></section>
-                    <h1 x-text="content.header4"></h1>
-                    <p x-text="content.text8"></p>
+                    <h1 x-text="content.header10"></h1>
+                    <p x-text="content.text9"></p>
                     <!-- im bild10 ist es ein array, deshalb ein x-for loop -->
                     <div class="split-grid">
-                        <template x-for="img in content.bild10">
+                        <template x-for="img in content.bilder3">
                             <img :src="returnImageURL(images,img.sys.id)" />
                         </template>
                     </div>
                 </div>
 
                 <div class="Persona grid-2">
-                    <h1 x-text="content.header5"></h1>
-                    <p x-text="content.text3"></p>
-                    <img :src="returnImageURL(images,content.bild4.sys.id)" />
-                    <img :src="returnImageURL(images,content.bild5.sys.id)" />
+                    <h1 x-text="content.header4"></h1>
+                    <template x-for="img in content.bild10">
+                        <img :src="returnImageURL(images,img.sys.id)" />
+                    </template>
                 </div>
 
                 <div class="DigitalDesign grid-2">
                     <section id="DigitalDesign"></section>
-                    <h1 x-text="content.header6"></h1>
-                    <p x-text="content.text4"></p>
+                    <h1 x-text="content.header5"></h1>
+                </div>
+                <div class="bild12 grossbilder">
+                    <img :src="returnImageURL(images,content.bild4.sys.id)" />
                 </div>
 
-                <div class="Fotobanner">
-                        <article class="carousel" id="carousel">
-                            <template x-for="img in content.bild6">
-                                <li><img :src="returnImageURL(images,img.sys.id)" /></li>
-                             </template>
-                             
-                        </article>
-                </div>
 
                 <div class="Prototyping grid-2">
                     <section id="Prototyping"></section>
                     <h1 x-text="content.header7"></h1>
-                    <p x-text="content.text5"></p>
+                    <p x-text="content.text4"></p>
                     
                     <p x-text="content.text6"></p>
                     
-                </div>
-
-                <div class="bild3 grossbilder">
-                    <img :src="returnImageURL(images,content.bild7.sys.id)" />
-                </div>
-
-                <div class="bild4 grossbilder">
-                    <img :src="returnImageURL(images,content.bild8.sys.id)" />
-                </div>
-
-                <div class="Results grid-2">
-                    <section id="Results"></section>
-                    <h1 x-text="content.header8"></h1>
-                    <p x-text="content.text7"></p>
-                </div>
-
-                <div class="bild5 grossbilder">
-                    <template x-for="img in content.bild11">
-                        <img :src="returnImageURL(images,img.sys.id)" />
-                    </template>
                 </div>
 
                 <div class="danke grid-2">

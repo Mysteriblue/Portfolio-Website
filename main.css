@@ -352,6 +352,7 @@ li a:hover {
     grid-column: 1/4;
     display: flex;
     flex-direction: column;
+    gap: 10vh;
 }
 .danke{
     grid-row: 52;

@@ -44,7 +44,7 @@ img{
 .container{
     display: grid;
     grid-template-columns: 18% 50% 25%;
-    grid-template-rows: repeat(58, 20vh);
+    grid-template-rows: repeat(31, 20vh);
     column-gap: 3vw;
     row-gap: 2vh;
     width: 100vw;
@@ -225,7 +225,7 @@ li a:hover {
 .Ideation{
     font-family: 'Roboto', bold;
     grid-column: 2;
-    grid-row: 18;
+    grid-row: 10;
 }
 .Ideation p{
     padding-top: 5vh;
@@ -235,12 +235,14 @@ li a:hover {
     display: block;
     float: left;
     width: 15vw;
-    padding: 12vh 3vh 5vh;
+    height: 100%;
+    padding: 0vh 1vh 3vh;
 }
 .split-grid{
-    display: block;
+    display: flex;
     float: left;
-    padding: 0vh 1vh 4vh;
+    padding: 10vh 0vh 0vh;
+    flex-wrap: wrap;
 }
 .bild8{
     grid-row: 19;
@@ -250,30 +252,26 @@ li a:hover {
 .Persona{
     float: left;
     text-align: left;
-    padding-top: 10vh;
     display: block;
     font-family: 'Roboto', sans-serif;
-    grid-row: 23;
+    grid-row: 15;
 }
-.Persona h2{
-    font-family: 'Roboto', bold;
-}
-.Persona p{
-    padding-top: 5vh;
-    line-height: 1.8;
-}
+
 .Persona Img{
-    display: block;
+    display: flex;
     float: left;
-    padding-top: 10vh;
-    width: 25vw;
+    width: 12vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 .DigitalDesign{
     float: left;
     text-align: left;
-    display: block;
+    display: flex;
+    align-items: flex-end;
     font-family: 'Roboto', sans-serif;
-    grid-row: 28;
+    grid-row: 17;
 }
 .DigitalDesign p{
     padding-top: 5vh;
@@ -290,68 +288,21 @@ li a:hover {
     grid-column: 1/4;
     padding: 0vh 30vh 0vh;
 }
-.carousel{
-    display: flex;
-  width: 200%;
-  animation: bannermove 20s linear infinite;
-}
-@keyframes "bannermove" {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-#carousel{
-    padding-top: 5vh;
-    float: left;
-    overflow-y: hidden;
-    overflow-x: auto;
-    width: 100%;
-    white-space: nowrap;
-    display: flex;
-    flex-direction: row;
-}
-#carousel .Fotobanner{
-    display: inline-block;
-}
-.Fotobanner{
-    display: block;
-    height: 100%;
-    width: 100%;
-    grid-column: 1/4;
-    grid-row: 29/32;
-}
+
 .Prototyping{
     float: left;
-    text-align: left;
-    display: block;
+    align-items: center;
+    justify-content: center;
+    display: flex;
     font-family: 'Roboto', sans-serif;
-    grid-row: 34;
+    grid-row: 23;
 }
 .Prototyping p{
     padding-top: 5vh;
     line-height: 1.5;
 }
-.bild11{
-    grid-row: 36;
-    grid-column: 1/4;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    list-style-type: none;
-    gap: 1vw;
-}
-.bild3{
-    grid-column: 1/4;
-    grid-row: 38;
-    width: 100vw;
-    height: 100%;
-    padding: 0vh 30vh;
-}
-.bild4{
-    grid-row: 43;
+.bild12{
+    grid-row: 18;
     grid-column: 1/4;
 }
 .Results{
@@ -361,20 +312,9 @@ li a:hover {
     font-family: 'Roboto', sans-serif;
     grid-row: 48;
 }
-.Results p{
-    padding-top: 5vh;
-}
-.Results Img{
-    padding-top: 5vh;
-}
-.bild5{
-    grid-row: 46;
-    grid-column: 1/4;
-    display: flex;
-    flex-direction: column;
-}
+
 .danke{
-    grid-row: 50;
+    grid-row: 24;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -382,7 +322,7 @@ li a:hover {
     font-size: 30px;
 }
 .nextstudies{
-    grid-row: 51; 
+    grid-row: 25; 
     grid-column: 1/4;
     width: 70%;
     font-family: 'Roboto';
@@ -467,7 +407,7 @@ li a:hover {
 }
 .footer{
     position: relative;
-    grid-row: 55;
+    grid-row: 29;
     grid-column: 1/4;
     height: 30vh;
     padding: 15vh 0vh 20vh;
