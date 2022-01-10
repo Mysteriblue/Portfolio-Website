@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/startseite.css">
+    <link rel="stylesheet" href="/Portfolio-Website/startseite.css">
     <link href="link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -19,50 +19,87 @@
 
                     <div class="header container">
                         <nav>
-                            <a href="index.html">Shiying Portfolio 21'</a>
-                            <a href="about.html">About</a>
+                            <a href="/Portfolio-Website/startseite.html">Shiying Portfolio 21'</a>
+                            <a href="/Portfolio-Website/aboutme.html">About</a>
                         </nav>
 
                         <div class="status">
+                            <div class="circle"></div>
+                            <div class="statusp">
                             <p>Available for new collaborations</p>
                         </div>
-
-                        <template x-if="images">
-                            <!-- die funktion returnImageURL sucht den passenden url zur bild id -->
-                            <img :src="returnImageURL(images,content.bild1.sys.id)" />
-                         </template>
+                        </div>
 
                         <div class="Summary">
+                            
                             <table>
-                                <tr>
-                            <th><h1 x-text="content.header1"></h1></th>
-                            <th><h2 x-text="content.bio"></h2></th>
-                                </tr>
-                            <!--<td><p x-text="content.summary1"></p></td>
-                            <td><p x-text="content.kategorie"></p></td>-->
+                                
+                                    <tr>
+                                        <th><h1 x-text="content.header1"></h1></th>
+                                    </tr>
+                           
+                            <td><p x-text="content.bio"></p></td>
+                            <td><p x-text="content.kategorie"></p></td>
                                 
                         </table>
-                        </div>
+                    </div>
                     </div>
 
-                    <div class="CaseStudy">
+                    <div class="bild1 grossbilder">
+                        <img :src="returnImageURL(images,content.bild1.sys.id)" />
+                    </div>
+
+                    <div class="projekte container">
+                        <h1>Projects</h1>
+
+                        <div class="pages">
+                        <table>
+                            <tr>
+                                <td><h2>Case Studies</h2></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                            <td><li><a href="/Portfolio-Website/page1.html">Digital Customer Journey - UX/UI Design</a></li></td>
+                            <td>2021 - now</td>
+                            </tr>
+
+                            <tr>
+                            <td><li><a href="/Portfolio-Website/page2.html">Herzfroh 2.0 - UX/UI Design</a></li></td>
+                            <td>2021 - now</td>
+                            </tr>
+
+                            <tr>
+                            <td><li><a href="/Portfolio-Website/page3.html">Tangs Sweets</a></li></td>
+                            <td>2020</td>
+                            </tr>
+
+                            <tr>
+                            <td><li><a href="/Portfolio-Website/page4.html">SDG Goals - Data Visualization</a></li></td>
+                            <td>2021</td>
+                        </tr>
+                    </table>
+                </div>
+                    </div>
+
+                    <!--<div class="CaseStudy">
                         <h1 x-text="content.projecttitel"></h1>
-                    </div>
+                    </div>-->
 
-                    <div class="projekte">
+                    <!--<div class="projekte">
                         <h2 x-text="content.casestudytitel"></h2>
                         <h2 x-text="content.project1"></h2>
                         <h2 x-text="content.project2"></h2>
                         <h2 x-text="content.project3"></h2>
                         <h2 x-text="content.project4"></h2>
-                        <!--<ul>
+                        <ul>
                             <li><a href="#Introduction">Introduction</a></li>
                             <li><a href="#IdeationPhase">Ideation Phase</a></li>
                             <li><a href="#DigitalDesign">Digital Design</a></li>
                             <li><a href="#Prototyping">Prototyping</a></li>
                             <li><a href="#Results">Results</a></li>
-                        </ul>-->
-                    </div>
+                        </ul>
+                    </div>-->
 
                     <!--<div class="nav-rechts">
                         <table>
@@ -104,48 +141,53 @@
                         <img :src="returnImageURL(images,content.bild2.sys.id)" />
                     </div>-->
 
-                    <div class="resume">
-                        <!--<section id="IdeationPhase"></section>-->
-                    <h2 x-text="content.resume"></h2>
+                    <!--<div class="resume">
+                        <section id="IdeationPhase"></section>
+                    <h2 x-text="content.resume"></h2>-->
 
                     <!--<div class="fuss">
                         <section id="IdeationPhase"></section>
                         <img :src="returnImageURL(images,content.fuss.sys.id)" />-->
 
 
-                <div class="footer">
+                        <div class="footer">
 
-                    <div class="end">
-                        <h1>Lets Get in Touch</h1>
-                        <br>
-                        <p>Feel free to get in touch with me when you have a project on your mind or just say hi. I don’t mind making new friends</p>
+                            <div class="end">
+                                <h1>Lets Get in Touch</h1>
+                                <br>
+                                <p>Feel free to get in touch with me when you have a project on your mind or just say hi. I don’t mind making new friends</p>
+                                </div>
+        
+                                <div class="resume">
+                                    <a href="/Portfolio-Website/Bilder/Lebenslauf_ShiyingSu.pdf" download="Lebenslauf_ShiyingSu.pdf">Resume Download</a>
+                                </div>
+                            
+        
+                            <div class="links untenfooter">
+                                <img src="/Portfolio-Website/Bilder/Brille.svg">
+                                <p>Open to Relocation &</p>
+                                    <p>Working Remotley</p>
+                            </div>
+        
+                            <div class="mitte untenfooter">
+                                <p>Say Hi!</p>
+                                <br>
+                                <div class="mail">
+                                    <a href="mailto:shiying23@hotmail.com">shiying23@hotmail.com</a>
+                                    <img src="/Portfolio-Website/Bilder/mailbtn.svg">
+                                </div>
+        
+                            </div>
+        
+                            <div class="rechts untenfooter">
+                                <p>Lets be friends</p>
+                                <div class="socialmedia">
+                                <a href="https://www.instagram.com/luv_shiying/" target="_blank"><img src="/Portfolio-Website/Bilder/Icons/Insta.svg"></a>
+                                <a href="https://www.linkedin.com/in/shiying-su-33b4591b9/" target="_blank"><img src="/Portfolio-Website/Bilder/Icons/Linkedin.svg"></a>
+                                <a href="https://www.behance.net/shiyingsuu" target="_blank"><img src="/Portfolio-Website/Bilder/Icons/Behance.svg"></a>
+                            </div>
                         </div>
-
-                        <div class="resume">
-                            <p>Resume</p>
-                            <a href="path_to_file" download="CV.pdf">Download</a>
                         </div>
-                    
-
-                    <div class="links">
-                        <img src="/Bilder/Brille.svg">
-                        <p>Open to Relocation & Working Remotley</p>
-                    </div>
-
-                    <div class="mitte">
-                        <p>Say Hi!</p>
-
-                        <div class="mail">
-                            <a href="mailto:shiying23@hotmail.com">shiying23@hotmail.com</a>
-                            <img src="/Bilder/mailbtn.svg">
-                        </div>
-
-                    </div>
-
-                    <div class="rechts">
-                        <p>Lets be friends</p>
-                    </div>
-                </div> 
 
                     
                 </div>

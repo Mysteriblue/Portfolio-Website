@@ -12,7 +12,7 @@ img{
     position: sticky;
     top: 0;
     width: 100%
-  }
+}
 .status{
     display: flex;
     flex-direction: row;
@@ -26,21 +26,21 @@ img{
     height: 3vh;
     width: 15vw;
     margin: 5vh 38vh 1vh;
-  }
-  .statusp{
+}
+.statusp{
       display: block;
       font-family: 'Roboto';
       font-size: 15px;
       padding: 0.5vh 2vh;
-  }
-  .circle{
+}
+.circle{
       height: 10px;
     width: 10px;
     background-color: rgb(0, 255, 21);
     border-radius: 50%;
     display: block;
     margin: 1vh;
-  }
+}
 .container{
     display: grid;
     grid-template-columns: 18% 50% 25%;
