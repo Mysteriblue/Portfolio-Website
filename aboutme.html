@@ -48,7 +48,7 @@
 
                     <div class="bild2">
                     <template x-for="img in content.educationcareer">
-                        <img :src="returnImageURL(images,img.sys.id)" />
+                        <img class="imagegrid" :src="returnImageURL(images,img.sys.id)" />
                     </template>
                 </div>
 
@@ -58,7 +58,7 @@
 
                     <div class="bild3">
                     <template x-for="img in content.experiencescareer">
-                        <img :src="returnImageURL(images,img.sys.id)" />
+                        <img class="imagegrid" :src="returnImageURL(images,img.sys.id)" />
                     </template>
                 </div>
 

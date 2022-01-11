@@ -80,9 +80,8 @@ nav a:hover {
 .container{
     display: grid;
     grid-template-columns: 18% 50% 25%;
-    grid-template-rows: repeat(16, 20vh);
+    grid-template-rows: repeat(16, 16vh);
     column-gap: 3vw;
-    row-gap: 2vh;
     width: 100vw;
 }
 body {
@@ -94,7 +93,7 @@ body {
 .imagegrid {
     width: 50%;
     height: auto !important;
-    object-fit: cover;
+    /*object-fit: cover;*/
 }
 
 .grossbilder{
@@ -130,16 +129,15 @@ body {
 }
 .white{
     background-color: white;
-    grid-row: 6/13;
+    grid-row: 7/14;
     grid-column: 1/4;
     font-family: 'Roboto';
 }
 .education{
     grid-column: 1;
-    grid-row: 1;
+    grid-column: 2;
     display: flex;
-    align-items: center;
-    padding-left: 3vw;
+    align-items: end;
 }
 .bild2{
     grid-column: 2;
@@ -152,10 +150,9 @@ body {
 }
 .experiences{
     grid-row: 3;
-    grid-column: 1;
+    grid-column: 2;
     display: flex;
-    align-items: center;
-    padding-left: 3vw;
+    align-items: end;
 }
 .bild3{
     grid-column: 2;
@@ -168,10 +165,9 @@ body {
 }
 .offwork{
     grid-row: 5;
-    grid-column: 1/4;
+    grid-column: 2;
     display: flex;
-    align-items: center;
-    padding-left: 3vw;
+    align-items: end;
 }
 .bild4{
     grid-column: 2;
@@ -221,7 +217,7 @@ body {
 }
 .footer{
     position: relative;
-    grid-row: 13;
+    grid-row: 14;
     grid-column: 1/4;
     height: 30vh;
     padding: 15vh 0vh 20vh;
