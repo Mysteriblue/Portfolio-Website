@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css"  href="./startseite.css">
-    <link href="link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" type="text/css" href="./startseite.css">
+    <link href="link rel=" preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>Home</title>
 </head>
 
@@ -15,87 +18,105 @@
 
     <section class="content container" x-data="getData()" x-init="fetchStuff();">
         <template x-if="content">
-                <div class="container">
+            <div class="container">
 
-                    <div class="header container">
-                        <nav>
-                            <a href="/Portfolio-Website/startseite.html">Shiying Portfolio 21'</a>
-                            <a href="/Portfolio-Website/aboutme.html">About</a>
-                        </nav>
+                <div class="header container">
+                    <nav>
+                        <a href="/Portfolio-Website/startseite.html">Shiying Portfolio 21'</a>
+                        <a href="/Portfolio-Website/aboutme.html">About</a>
+                    </nav>
 
-                        <div class="status">
-                            <div class="circle"></div>
-                            <div class="statusp">
+                    <div class="status">
+                        <div class="circle"></div>
+                        <div class="statusp">
                             <p>Available for new collaborations</p>
                         </div>
+                    </div>
+
+                    <div class="Summary">
+                        <div class="summaryflex">
+                            <h1 x-text="content.header1"></h1>
                         </div>
 
-                        <div class="Summary">
-                            
-                            <table>
-                                
-                                    <tr>
-                                        <th><h1 x-text="content.header1"></h1></th>
-                                    </tr>
-                           
-                            <td><p x-text="content.bio"></p></td>
-                            <td><p x-text="content.kategorie"></p></td>
-                                
-                        </table>
-                    </div>
-                    </div>
-
-                    <div class="bild1 grossbilder">
-                        <img :src="returnImageURL(images,content.bild1.sys.id)" />
-                    </div>
-                </template>
-                    <div class="projekte container">
-                        <h1>Projects</h1>
-
-                        <div class="bilder">
-                            <img src="/Portfolio-Website/Bilder/Idealistic_Recruiting_System/Cover.jpg" alt="Cover Bild DCJ" id="dcj">
-                            <img src="/Portfolio-Website/Bilder/Herzfroh/Cover.jpg" alt="Cover Bild Herzfroh">
-                            <img src="/Portfolio-Website/Bilder/Tangs_Sweets/36.jpg" alt="Cover Bild Tang">
-                            <img src="/Portfolio-Website/Bilder/Data_Vizualitation/bigger.jpg" alt="Cover Bild SDG">
+                        <div class="border-tb summaryflex">
+                            <p x-text="content.bio"></p>
                         </div>
-
-                        <div class="pages">
-                        <table>
-
-                            <tr>
-                                <td><h2>Case Studies</h2></td>
-                                <td></td>
-                            </tr>
-
-                            
-                            <tr>
-                            <td><li><a href="/Portfolio-Website/page1.html" class="projektlink" data-filename="Bilder/Herzfroh/Cover.jpg" id="dcj">Digital Customer Journey - UX/UI Design</a></li></td>
-                            <td>2021 - now</td>
-                            </tr>
-
-                            <tr>
-                            <td><li><a href="/Portfolio-Website/page2.html" class="projektlink" data-filename="Bilder/Tangs_Sweets/8.JPG" id="herzfroh">Herzfroh 2.0 - UX/UI Design</a></li></td>
-                            <td>2021 - now</td>
-                            </tr>
-
-                            <tr>
-                            <td><li><a href="/Portfolio-Website/page3.html" class="projektlink" data-filename="Bilder/Herzfroh/Cover.jpg" id="tang">Tangs Sweets</a></li></td>
-                            <td>2020</td>
-                            </tr>
-
-                            <tr>
-                            <td><li><a href="/Portfolio-Website/page4.html" class="projektlink" data-filename="Bilder/Herzfroh/Cover.jpg" id="sdg">SDG Goals - Data Visualization</a></li></td>
-                            <td>2021</td>
-                        </tr>
-                    </table>
+                        <!--<div class="scrolldown summaryflex">
+                            <p>Scroll Down</p>
+                        </div>-->
+                    </div>
+                    
                 </div>
-                    </div>
 
-                    <!--<div class="CaseStudy">
+                <div class="bild1 grossbilder">
+                    <img :src="returnImageURL(images,content.bild1.sys.id)" />
+                </div>
+        </template>
+        <div class="projekte container">
+            <h1>Projects</h1>
+
+            <div class="bilder">
+                <img src="/Portfolio-Website/Bilder/Idealistic_Recruiting_System/Cover.jpg" alt="Cover Bild DCJ"
+                    id="dcj">
+                <img src="/Portfolio-Website/Bilder/Herzfroh/Cover.jpg" alt="Cover Bild Herzfroh">
+                <img src="/Portfolio-Website/Bilder/Tangs_Sweets/36.jpg" alt="Cover Bild Tang">
+                <img src="/Portfolio-Website/Bilder/Data_Vizualitation/bigger.jpg" alt="Cover Bild SDG">
+            </div>
+
+            <div class="pages">
+                <table>
+
+                    <tr>
+                        <td>
+                            <h2>Case Studies</h2>
+                        </td>
+                        <td></td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <li><a href="/Portfolio-Website/page1.html" class="projektlink"
+                                    data-filename="Bilder/Idealistic_Recruiting_System/Cover.jpg" id="dcj">Digital Customer Journey - UX/UI
+                                    Design</a></li>
+                        </td>
+                        <td>2021 - now</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <li><a href="/Portfolio-Website/page2.html" class="projektlink"
+                                    data-filename="Bilder/Herzfroh/Cover.jpg" id="herzfroh">Herzfroh 2.0 - UX/UI
+                                    Design</a></li>
+                        </td>
+                        <td>2021 - now</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <li><a href="/Portfolio-Website/page3.html" class="projektlink"
+                                    data-filename="Bilder/Tangs_Sweets/36.jpg" id="tang">Tangs Sweets</a></li>
+                        </td>
+                        <td>2020</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <li><a href="/Portfolio-Website/page4.html" class="projektlink"
+                                    data-filename="Bilder/Data_Vizualitation/bigger.jpg" id="sdg">SDG Goals - Data
+                                    Visualization</a></li>
+                        </td>
+                        <td>2021</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!--<div class="CaseStudy">
                         <h1 x-text="content.projecttitel"></h1>
                     </div>-->
 
-                    <!--<div class="projekte">
+        <!--<div class="projekte">
                         <h2 x-text="content.casestudytitel"></h2>
                         <h2 x-text="content.project1"></h2>
                         <h2 x-text="content.project2"></h2>
@@ -109,70 +130,75 @@
                             <li><a href="#Results">Results</a></li>
                         </ul>
                     </div>-->
-              
 
-                        <div class="footer">
 
-                            <div class="end">
-                                <h1>Lets Get in Touch</h1>
-                                <br>
-                                <p>Feel free to get in touch with me when you have a project on your mind or just say hi. I don’t mind making new friends</p>
-                                </div>
-        
-                                <div class="resume">
-                                    <a href="/Portfolio-Website/Bilder/Lebenslauf_ShiyingSu.pdf" download="Lebenslauf_ShiyingSu.pdf">Resume Download</a>
-                                </div>
-                            
-        
-                            <div class="links untenfooter">
-                                <img src="/Portfolio-Website/Bilder/Brille.svg">
-                                <p>Open to Relocation &</p>
-                                    <p>Working Remotley</p>
-                            </div>
-        
-                            <div class="mitte untenfooter">
-                                <p>Say Hi!</p>
-                                <br>
-                                <div class="mail">
-                                    <a href="mailto:shiying23@hotmail.com">shiying23@hotmail.com</a>
-                                    <img src="/Portfolio-Website/Bilder/mailbtn.svg">
-                                </div>
-        
-                            </div>
-        
-                            <div class="rechts untenfooter">
-                                <p>Lets be friends</p>
-                                <div class="socialmedia">
-                                <a href="https://www.instagram.com/luv_shiying/" target="_blank"><img src="/Portfolio-Website/Bilder/Icons/Insta.svg"></a>
-                                <a href="https://www.linkedin.com/in/shiying-su-33b4591b9/" target="_blank"><img src="/Portfolio-Website/Bilder/Icons/Linkedin.svg"></a>
-                                <a href="https://www.behance.net/shiyingsuu" target="_blank"><img src="/Portfolio-Website/Bilder/Icons/Behance.svg"></a>
-                            </div>
-                        </div>
-                        </div>
+        <div class="footer">
 
-                    
+            <div class="end">
+                <h1>Lets Get in Touch</h1>
+                <br>
+                <p>Feel free to get in touch with me when you have a project on your mind or just say hi. I don’t mind
+                    making new friends</p>
+            </div>
+
+            <div class="resume">
+                <a href="/Portfolio-Website/Bilder/Lebenslauf_ShiyingSu.pdf" download="Lebenslauf_ShiyingSu.pdf">Resume
+                    Download</a>
+            </div>
+
+
+            <div class="links untenfooter">
+                <img src="/Portfolio-Website/Bilder/Brille.svg">
+                <p>Open to Relocation &</p>
+                <p>Working Remotley</p>
+            </div>
+
+            <div class="mitte untenfooter">
+                <p>Say Hi!</p>
+                <br>
+                <div class="mail">
+                    <a href="mailto:shiying23@hotmail.com">shiying23@hotmail.com</a>
+                    <img src="/Portfolio-Website/Bilder/mailbtn.svg">
                 </div>
+
+            </div>
+
+            <div class="rechts untenfooter">
+                <p>Lets be friends</p>
+                <div class="socialmedia">
+                    <a href="https://www.instagram.com/luv_shiying/" target="_blank"><img
+                            src="/Portfolio-Website/Bilder/Icons/Insta.svg"></a>
+                    <a href="https://www.linkedin.com/in/shiying-su-33b4591b9/" target="_blank"><img
+                            src="/Portfolio-Website/Bilder/Icons/Linkedin.svg"></a>
+                    <a href="https://www.behance.net/shiyingsuu" target="_blank"><img
+                            src="/Portfolio-Website/Bilder/Icons/Behance.svg"></a>
                 </div>
-           
-   
+            </div>
+        </div>
+
+
+        </div>
+        </div>
+
+
     </section>
-    <script >
-    // photos austauschen
-    document.addEventListener('DOMContentLoaded', (event) => {
-        document.querySelectorAll(".projektlink").forEach( elem => {
-            elem.addEventListener("mouseenter",function(){
-                document.querySelector(".projekte").style.backgroundImage = "url('"+this.dataset.filename+"')";
+    <script>
+        // photos austauschen
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll(".projektlink").forEach(elem => {
+                elem.addEventListener("mouseenter", function () {
+                    document.querySelector(".projekte").style.backgroundImage = "url('" + this
+                        .dataset.filename + "')";
+                })
             })
-        }
-        )
-    });
+        });
     </script>
     <!-- AlpineJS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <script>
-        let hash = location.hash.replace("#","");
-  
+        let hash = location.hash.replace("#", "");
+
         function getData() {
             return {
                 content: null,
@@ -185,12 +211,13 @@
                 page2: "6aPLGnDHFeJvL0hexzmvs0", // Herzfroh 2.0 //
                 page3: "6d3ikGxbAOIHsGmP3e9Z0Q", // Tangs Sweets //
                 page4: "2SYItgvh6wGVvEPwPM5Rbu", // SDG //
-                page5: "YduehITjLS7T5fXmrAi7w",  // Startseite //
+                page5: "YduehITjLS7T5fXmrAi7w", // Startseite //
                 page6: "5x6xgwzQD70VAy0oYsQdd1", // About Me //
                 fetchStuff() {
                     // getting content for specific contenttype
                     fetch(
-                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/entries/'+this.page5+'?access_token=' +
+                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/entries/' + this.page5 +
+                            '?access_token=' +
                             this.token + "&content_type=" + this.contenttype1)
                         .then(res => res.json())
                         .then(data => {
@@ -211,13 +238,12 @@
 
         function returnImageURL(_image_array, _id) {
             try {
-            let image = _image_array.find(element => element.sys.id == _id);
-            return image.fields.file.url;
-        }catch {
-            return null;
+                let image = _image_array.find(element => element.sys.id == _id);
+                return image.fields.file.url;
+            } catch {
+                return null;
+            }
         }
-        }
-        
     </script>
 
 

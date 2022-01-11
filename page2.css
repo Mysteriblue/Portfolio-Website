@@ -301,6 +301,7 @@ li a:hover {
     grid-row: 29;
     grid-column: 1/4;
     padding: 0vh 30vh 0vh;
+    list-style-type: none;
 }
 .carousel{
     display: flex;
@@ -360,7 +361,7 @@ li a:hover {
     grid-row: 38;
     width: 100vw;
     height: 100%;
-    padding: 0vh 30vh;
+    padding: 0vh 38vh;
 }
 .bild4{
     grid-row: 43;
@@ -369,7 +370,6 @@ li a:hover {
 .Results{
     float: left;
     text-align: left;
-    padding-top: 10vh;
     font-family: 'Roboto', sans-serif;
     grid-row: 48;
 }
@@ -386,7 +386,7 @@ li a:hover {
     flex-direction: column;
 }
 .danke{
-    grid-row: 50;
+    grid-row: 52;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -394,11 +394,11 @@ li a:hover {
     font-size: 30px;
 }
 .nextstudies{
-    grid-row: 51; 
+    grid-row: 53; 
     grid-column: 1/4;
     width: 70%;
     font-family: 'Roboto';
-    padding: 0vh 35vh;
+    padding: 10vh 35vh;
 }
 .nextstudies h1{
     font-size: 52px;
@@ -411,18 +411,18 @@ li a:hover {
     height: 10vh;
     display: flex;
 }
-.sdg p, .herzfroh p, .tang p{
+.sdg p, .herzfroh p, .tang p, .resume a{
     border-top: 1px solid white;
     border-bottom: 1px solid white;
     margin-top: 1rem;
     padding: .5rem 0vh 0.5rem;
 }
 
-.herzfroh a{
+.herzfroh a, .sdg a{
     text-decoration: none;
     color: white;
 }
-.herzfroh a:hover{
+.herzfroh a:hover, .sdg a:hover{
     color: rgb(174, 0, 243);
 }
 .herzfroh{
@@ -463,7 +463,6 @@ li a:hover {
     background-color: #0F0F0F;
     align-items: center;
     font-family: 'Roboto';
-    text-decoration: underline overline;
 }
 .resume a{
     text-decoration: none;
@@ -476,7 +475,7 @@ li a:hover {
 }
 .footer{
     position: relative;
-    grid-row: 55;
+    grid-row: 57;
     grid-column: 1/4;
     height: 30vh;
     padding: 15vh 0vh 20vh;

@@ -114,7 +114,7 @@ body {
     color: white;
     width: 130vh;
     text-align: left;
-    grid-row: 4;
+    grid-row: 3;
     padding-left: 20%;
 }
 .Summary h1{
@@ -124,7 +124,9 @@ body {
 .Summary p{
     font-size: 18px;
     font-family: 'Roboto', sans-serif;;
-    width: 100vh;
+    width: 50rem;
+    padding-top: 2rem;
+    line-height: 2rem;
 }
 .white{
     background-color: white;
@@ -203,13 +205,16 @@ body {
     background-color: #0F0F0F;
     align-items: center;
     font-family: 'Roboto';
-    text-decoration: underline overline;
 }
 .resume a{
     text-decoration: none;
     color: white;
     width: 23vw;
     word-spacing: 15vw;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-top: 1rem;
+    padding: .5rem 0vh 0.5rem;
 }
 .resume a:hover{
     color: rgb(174, 0, 243);
