@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Portfolio-Website/startseite.css">
+    <link rel="stylesheet" type="text/css"  href="./startseite.css">
     <link href="link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
                     <div class="bild1 grossbilder">
                         <img :src="returnImageURL(images,content.bild1.sys.id)" />
                     </div>
-
+                </template>
                     <div class="projekte container">
                         <h1>Projects</h1>
 
@@ -69,22 +69,22 @@
 
                             
                             <tr>
-                            <td><li><a href="/Portfolio-Website/page1.html" class="projektlink" id="dcj">Digital Customer Journey - UX/UI Design</a></li></td>
+                            <td><li><a href="/Portfolio-Website/page1.html" class="projektlink" data-filename="Bilder/Herzfroh/Cover.jpg" id="dcj">Digital Customer Journey - UX/UI Design</a></li></td>
                             <td>2021 - now</td>
                             </tr>
 
                             <tr>
-                            <td><li><a href="/Portfolio-Website/page2.html" class="projektlink" id="herzfroh">Herzfroh 2.0 - UX/UI Design</a></li></td>
+                            <td><li><a href="/Portfolio-Website/page2.html" class="projektlink" data-filename="Bilder/Tangs_Sweets/8.JPG" id="herzfroh">Herzfroh 2.0 - UX/UI Design</a></li></td>
                             <td>2021 - now</td>
                             </tr>
 
                             <tr>
-                            <td><li><a href="/Portfolio-Website/page3.html" class="projektlink" id="tang">Tangs Sweets</a></li></td>
+                            <td><li><a href="/Portfolio-Website/page3.html" class="projektlink" data-filename="Bilder/Herzfroh/Cover.jpg" id="tang">Tangs Sweets</a></li></td>
                             <td>2020</td>
                             </tr>
 
                             <tr>
-                            <td><li><a href="/Portfolio-Website/page4.html" class="projektlink" id="sdg">SDG Goals - Data Visualization</a></li></td>
+                            <td><li><a href="/Portfolio-Website/page4.html" class="projektlink" data-filename="Bilder/Herzfroh/Cover.jpg" id="sdg">SDG Goals - Data Visualization</a></li></td>
                             <td>2021</td>
                         </tr>
                     </table>
@@ -109,7 +109,7 @@
                             <li><a href="#Results">Results</a></li>
                         </ul>
                     </div>-->
-
+              
 
                         <div class="footer">
 
@@ -154,16 +154,19 @@
                 </div>
                 </div>
            
-        </template>
+   
     </section>
     <script >
-        (function () {
-  var els = document.querySelector("[id='herzfroh']");
-  console.log(els);
-})();
-        document.addEventListener('DOMContentLoaded', (event) => {
-        console.log(document.querySelector(".projektlink"))
-    })</script>
+    // photos austauschen
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll(".projektlink").forEach( elem => {
+            elem.addEventListener("mouseenter",function(){
+                document.querySelector(".projekte").style.backgroundImage = "url('"+this.dataset.filename+"')";
+            })
+        }
+        )
+    });
+    </script>
     <!-- AlpineJS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
