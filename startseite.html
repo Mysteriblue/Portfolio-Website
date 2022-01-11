@@ -156,21 +156,21 @@
            
         </template>
     </section>
-    <script >
+    <script defer >
         (function () {
-  var els = document.querySelector("[id='herzfroh']");
-  console.log(els);
-})();
+        var els = document.querySelector("[id='herzfroh']");
+        console.log(els);
+        })();
         document.addEventListener('DOMContentLoaded', (event) => {
-        console.log(document.querySelector(".projektlink"))
-    })</script>
+            console.log(document.querySelectorAll(".projektlink"))
+        })
+        </script>
     <!-- AlpineJS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <script>
         let hash = location.hash.replace("#","");
   
-        
         function getData() {
             return {
                 content: null,
