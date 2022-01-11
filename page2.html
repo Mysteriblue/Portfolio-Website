@@ -1,131 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Portfolio-Website/page2.css">
-    <link href="link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="link rel=" preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>Herzfroh 2.0</title>
 </head>
 
 <body>
-
     <section class="content container" x-data="getData()" x-init="fetchStuff();">
         <template x-if="content">
-                <div class="container">
+            <div class="container">
+                <div class="header container">
+                    <nav>
+                        <a href="/Portfolio-Website/startseite.html">Shiying Portfolio 21'</a>
+                        <a href="/Portfolio-Website/aboutme.html">About</a>
+                    </nav>
 
-
-                    <div class="header container">
-                        <nav>
-                            <a href="/Portfolio-Website/startseite.html">Shiying Portfolio 21'</a>
-                            <a href="/Portfolio-Website/aboutme.html">About</a>
-                        </nav>
-
-                        <div class="status">
-                            <div class="circle"></div>
-                            <div class="statusp">
+                    <div class="status">
+                        <div class="circle"></div>
+                        <div class="statusp">
                             <p>Available for new collaborations</p>
                         </div>
+                    </div>
+
+                    <div class="Summary">
+                        <div class="summaryflex">
+                            <h1 x-text="content.header1"></h1>
+                            <h1 x-text="content.datum"></h1>
                         </div>
-
-                        <div class="Summary">
-                            
-                            <table>
-                                
-                                    <tr>
-                                    
-                                        <th><h1 x-text="content.header1"></h1></th>
-                                        <th><h1 x-text="content.datum"></h1></th>
-                                    
-                                    </tr>
-                           
-                            <td><p x-text="content.summary1"></p></td>
-                            <td><p x-text="content.kategorie"></p></td>
-                                
-                        </table>
-                    </div>
-                    </div>
-
-                    <div class="bild1 grossbilder">
-                        <template x-if="images">
-                         <!-- die funktion returnImageURL sucht den passenden url zur bild id -->
-                            <img :src="returnImageURL(images,content.bild1.sys.id)" />
-                         </template>
-                    </div>
-
-                    <div class="CaseStudy">
-                        <h1 x-text="content.header2"></h1>
-                    </div>
-
-                    <div class="nav-links sticky" id="sticky">
-                        <p>Deliverables</p>
-                        <ul>
-                            <li><a href="#Introduction">Introduction</a></li>
-                            <li><a href="#IdeationPhase">Ideation Phase</a></li>
-                            <li><a href="#DigitalDesign">Digital Design</a></li>
-                            <li><a href="#Prototyping">Prototyping</a></li>
-                            <li><a href="#Results">Next Steps</a></li> 
-                        </ul>
-                    </div>
-
-                    <div class="nav-rechts sticky" id="sticky">
+                        <div class="border-tb summaryflex">
+                        <p x-text="content.summary1" ></p>
+                        <div x-text="content.kategorie"></div>
+                        </div>
                         
-                        
-                            <div class="floating info">
-                                <table>
+                    </div>
+                </div>
+
+                <div class="bild1 grossbilder">
+                    <template x-if="images">
+                        <!-- die funktion returnImageURL sucht den passenden url zur bild id -->
+                        <img :src="returnImageURL(images,content.bild1.sys.id)" />
+                    </template>
+                </div>
+
+                <div class="CaseStudy">
+                    <h1 x-text="content.header2"></h1>
+                </div>
+                <div class="nav-links sticky" id="sticky">
+                    <p>Deliverables</p>
+                    <ul>
+                        <li><a href="#Introduction">Introduction</a></li>
+                        <li><a href="#IdeationPhase">Ideation Phase</a></li>
+                        <li><a href="#DigitalDesign">Digital Design</a></li>
+                        <li><a href="#Prototyping">Prototyping</a></li>
+                        <li><a href="#Results">Next Steps</a></li>
+                    </ul>
+                </div>
+                <div class="nav-rechts sticky" id="sticky">
+                    <div class="floating info">
+                        <table>
                             <tr>
                                 <th>INFO</th>
                                 <th></th>
                             </tr>
                             <tr>
                                 <td>Website</td>
-                                <td><li><a href="https://www.hslu.ch/de-ch/hochschule-luzern/forschung/projekte/detail/?pid=4138" target="_blank">Herzfroh.ch</a></li></td>
+                                <td>
+                                    <li><a href="https://www.hslu.ch/de-ch/hochschule-luzern/forschung/projekte/detail/?pid=4138"
+                                            target="_blank">Herzfroh.ch</a></li>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Dauer</td>
                                 <td>December 2020 - continued</td>
                             </tr>
-                            </table>
-                            </div>
-
-                            <div class="floating list">
-                            <ul>
-                                <li><h2>TOOLS</h2></li>
-                                <li><p>Figma</p></li>
-                                <li><p>Miro</p></li>
-                                <li><p>Adobe Photoshop</p></li>
-                                <li><p>Adobe Illustrator</p></li>
-                            </ul>
-                            </div>
-                            <div class="floating list">
-                            <ul>
-                                <li><h2>DISCIPLINE</h2></li>
-                                <li><p>UX Research</p></li>
-                                <li><p>UI Design</p></li>
-                                <li><p>Prototyping</p></li>
-                                <li><p>Testing</p></li>
-                            </ul>
-                        </div>
-                        
+                        </table>
                     </div>
 
-                    <!--<div class="middle container">-->
+                    <div class="floating list">
+                        <ul>
+                            <li>
+                                <h2>TOOLS</h2>
+                            </li>
+                            <li>
+                                <p>Figma</p>
+                            </li>
+                            <li>
+                                <p>Miro</p>
+                            </li>
+                            <li>
+                                <p>Adobe Photoshop</p>
+                            </li>
+                            <li>
+                                <p>Adobe Illustrator</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="floating list">
+                        <ul>
+                            <li>
+                                <h2>DISCIPLINE</h2>
+                            </li>
+                            <li>
+                                <p>UX Research</p>
+                            </li>
+                            <li>
+                                <p>UI Design</p>
+                            </li>
+                            <li>
+                                <p>Prototyping</p>
+                            </li>
+                            <li>
+                                <p>Testing</p>
+                            </li>
+                        </ul>
+                    </div>
 
-                        <div class="Introduction grid-2">
-                            <section id="Introduction"></section>
-                            <h2 x-text="content.header3"></h2>
-                            <p x-text="content.text1"></p>
-                        </div>
+                </div>
 
-                        <div class="bild2 grossbilder">
-                            <img :src="returnImageURL(images,content.bild2.sys.id)" />
-                        </div>
+                <!--<div class="middle container">-->
 
-                    <div class="Ideation grid-2">
-                        <section id="IdeationPhase"></section>
+                <div class="Introduction grid-2">
+                    <section id="Introduction"></section>
+                    <h2 x-text="content.header3"></h2>
+                    <p x-text="content.text1"></p>
+                </div>
+
+                <div class="bild2 grossbilder">
+                    <img :src="returnImageURL(images,content.bild2.sys.id)" />
+                </div>
+
+                <div class="Ideation grid-2">
+                    <section id="IdeationPhase"></section>
                     <h1 x-text="content.header4"></h1>
                     <p x-text="content.text8"></p>
                 </div>
@@ -156,25 +170,25 @@
                 </div>
 
                 <div class="bild10 grossbilder">
-                <template x-for="img in content.bild6">
-                    <li><img :src="returnImageURL(images,img.sys.id)" /></li>
-                 </template>
+                    <template x-for="img in content.bild6">
+                        <li><img :src="returnImageURL(images,img.sys.id)" /></li>
+                    </template>
                 </div>
 
                 <div class="Prototyping grid-2">
                     <section id="Prototyping"></section>
                     <h1 x-text="content.header7"></h1>
                     <p x-text="content.text5"></p>
-                    
+
                     <p x-text="content.text6"></p>
-                    
+
                 </div>
 
                 <div class="bild11 grossbilder">
                     <template x-for="img in content.bilder1">
                         <li><img :src="returnImageURL(images,img.sys.id)" /></li>
-                     </template>
-                    </div>
+                    </template>
+                </div>
 
                 <div class="bild3 grossbilder">
                     <img :src="returnImageURL(images,content.bild7.sys.id)" />
@@ -220,25 +234,27 @@
                         </a>
                     </div>
                 </div>
-                
-              
+
+
                 <div class="footer">
 
                     <div class="end">
                         <h1>Lets Get in Touch</h1>
                         <br>
-                        <p>Feel free to get in touch with me when you have a project on your mind or just say hi. I don’t mind making new friends</p>
-                        </div>
+                        <p>Feel free to get in touch with me when you have a project on your mind or just say hi. I
+                            don’t mind making new friends</p>
+                    </div>
 
-                        <div class="resume">
-                            <a href="/Portfolio-Website/Bilder/Lebenslauf_ShiyingSu.pdf" download="Lebenslauf_ShiyingSu.pdf">Resume Download</a>
-                        </div>
-                    
+                    <div class="resume">
+                        <a href="/Portfolio-Website/Bilder/Lebenslauf_ShiyingSu.pdf"
+                            download="Lebenslauf_ShiyingSu.pdf">Resume Download</a>
+                    </div>
+
 
                     <div class="links untenfooter">
                         <img src="/Portfolio-Website/Bilder/Brille.svg">
                         <p>Open to Relocation &</p>
-                            <p>Working Remotley</p>
+                        <p>Working Remotley</p>
                     </div>
 
                     <div class="mitte untenfooter">
@@ -254,26 +270,30 @@
                     <div class="rechts untenfooter">
                         <p>Lets be friends</p>
                         <div class="socialmedia">
-                        <a href="https://www.instagram.com/luv_shiying/" target="_blank"><img src="/Portfolio-Website/Bilder/Icons/Insta.svg"></a>
-                        <a href="https://www.linkedin.com/in/shiying-su-33b4591b9/" target="_blank"><img src="/Portfolio-Website/Bilder/Icons/Linkedin.svg"></a>
-                        <a href="https://www.behance.net/shiyingsuu" target="_blank"><img src="/Portfolio-Website/Bilder/Icons/Behance.svg"></a>
+                            <a href="https://www.instagram.com/luv_shiying/" target="_blank"><img
+                                    src="/Portfolio-Website/Bilder/Icons/Insta.svg"></a>
+                            <a href="https://www.linkedin.com/in/shiying-su-33b4591b9/" target="_blank"><img
+                                    src="/Portfolio-Website/Bilder/Icons/Linkedin.svg"></a>
+                            <a href="https://www.behance.net/shiyingsuu" target="_blank"><img
+                                    src="/Portfolio-Website/Bilder/Icons/Behance.svg"></a>
+                        </div>
                     </div>
                 </div>
-                </div> 
 
-                    
-                </div>
-                </div>
-           
+
+            </div>
+            </div>
+
         </template>
     </section>
-    
+
     <!-- AlpineJS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="./page1.js"></script>
     <script>
-        let hash = location.hash.replace("#","");
+        let hash = location.hash.replace("#", "");
         console.log(hash)
+
         function getData() {
             return {
                 content: null,
@@ -287,7 +307,8 @@
                 fetchStuff() {
                     // getting content for specific contenttype
                     fetch(
-                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/entries/'+this.page2+'?access_token=' +
+                            'https://cdn.contentful.com/spaces/pq2sjdzw367p/environments/master/entries/' + this.page2 +
+                            '?access_token=' +
                             this.token + "&content_type=" + this.contenttype)
                         .then(res => res.json())
                         .then(data => {

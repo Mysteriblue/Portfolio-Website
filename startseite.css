@@ -147,6 +147,8 @@ body {
     font-size: 30px;
     font-family: 'Roboto';
     padding-top: 5vh;
+    background: url("./Bilder/Herzfroh/Cover.jpg");
+    background-size: 100% 100%;
 }
 .projekte h1{
     color: black;
@@ -176,6 +178,7 @@ body {
     flex-direction: row;
     padding-left: 3vw;
     padding-top: 2vh;
+
 }
 .pages h2{
     font-size: 30px;

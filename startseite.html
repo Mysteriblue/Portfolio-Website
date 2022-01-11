@@ -69,22 +69,22 @@
 
                             
                             <tr>
-                            <td><li><a href="/Portfolio-Website/page1.html" id="dcj">Digital Customer Journey - UX/UI Design</a></li></td>
+                            <td><li><a href="/Portfolio-Website/page1.html" class="projektlink" id="dcj">Digital Customer Journey - UX/UI Design</a></li></td>
                             <td>2021 - now</td>
                             </tr>
 
                             <tr>
-                            <td><li><a href="/Portfolio-Website/page2.html" id="herzfroh">Herzfroh 2.0 - UX/UI Design</a></li></td>
+                            <td><li><a href="/Portfolio-Website/page2.html" class="projektlink" id="herzfroh">Herzfroh 2.0 - UX/UI Design</a></li></td>
                             <td>2021 - now</td>
                             </tr>
 
                             <tr>
-                            <td><li><a href="/Portfolio-Website/page3.html" id="tang">Tangs Sweets</a></li></td>
+                            <td><li><a href="/Portfolio-Website/page3.html" class="projektlink" id="tang">Tangs Sweets</a></li></td>
                             <td>2020</td>
                             </tr>
 
                             <tr>
-                            <td><li><a href="/Portfolio-Website/page4.html" id="sdg">SDG Goals - Data Visualization</a></li></td>
+                            <td><li><a href="/Portfolio-Website/page4.html" class="projektlink" id="sdg">SDG Goals - Data Visualization</a></li></td>
                             <td>2021</td>
                         </tr>
                     </table>
@@ -156,13 +156,21 @@
            
         </template>
     </section>
-    
+    <script >
+        (function () {
+  var els = document.querySelector("[id='herzfroh']");
+  console.log(els);
+})();
+        document.addEventListener('DOMContentLoaded', (event) => {
+        console.log(document.querySelector(".projektlink"))
+    })</script>
     <!-- AlpineJS -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <script>
         let hash = location.hash.replace("#","");
-        console.log(hash)
+  
+        
         function getData() {
             return {
                 content: null,
@@ -200,8 +208,15 @@
         }
 
         function returnImageURL(_image_array, _id) {
+            try {
             let image = _image_array.find(element => element.sys.id == _id);
             return image.fields.file.url;
+        }catch {
+            return null;
         }
+        }
+        
     </script>
+
+
 </body>

@@ -5,6 +5,14 @@
 html { 
     scroll-behavior: smooth; 
 } 
+body {
+    background-color: #0F0F0F;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Roboto';
+}
+
 img{
     max-width: 100%;
 }
@@ -85,12 +93,7 @@ ul {
 .info{
     width: 100%;
 }
-body {
-    background-color: #0F0F0F;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-}
+
 .grid-2{
     grid-column: 2;
 }
@@ -124,7 +127,6 @@ nav a{
     text-decoration: none;
     color: white;
 font-size: 20px;
-font-family: 'Roboto';
 }
 nav a:hover {
     color: rgb(174, 0, 243);
@@ -136,7 +138,6 @@ nav a:hover {
     position: sticky;
     list-style-type: none;
     left: 5%;
-    font-family: 'Roboto';
 }
 .nav-links p{
     font-family: 'Roboto', thin;
@@ -148,7 +149,6 @@ nav a:hover {
     grid-column: 3; 
     grid-row: 8;
     position: sticky;
-    font-family: 'Roboto';
 }
 
 li a{
@@ -166,12 +166,21 @@ li a:hover {
     text-align: left;
     grid-row: 4;
     padding-left: 5%;
-    grid-column: 1/4;
+    grid-column: 1/3;
 }
+.summaryflex {
+    display: flex;
+    justify-content: space-between;
+}
+.border-tb {
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+}
+
 .Summary h1{
     color: white;
     font-size: 64px;
-    font-family: 'Roboto', bold;
+    font-weight: 700;
 }
 
 .Summary p{
@@ -179,6 +188,9 @@ li a:hover {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;;
     width: 50vw;
+    padding: 1vh;
+}
+.Summary div {
     padding: 1vh;
 }
 .content{
@@ -393,22 +405,19 @@ li a:hover {
     padding: 1vh 0vh 10vh;
     line-height: 0;
 }
-.tang p{
-    text-decoration-line: overline underline; 
-    padding: 3vh 0vh 0vh;
-}
+
 .sdg{
     width: 32vw;
     height: 10vh;
+    display: flex;
 }
-.sdg p{
-    text-decoration-line: overline underline; 
-    padding: 3vh 0vh 0vh;
+.sdg p, .herzfroh p, .tang p{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-top: 1rem;
+    padding: .5rem 0vh 0.5rem;
 }
-.herzfroh p{
-    text-decoration-line: overline underline; 
-    padding: 3vh 0vh 0vh;
-}
+
 .herzfroh a{
     text-decoration: none;
     color: white;
