@@ -240,7 +240,6 @@ li a:hover {
     grid-row: 18;
 }
 .Ideation p{
-    padding-top: 5vh;
     line-height: 2;
 }
 .Ideation img{
@@ -288,7 +287,7 @@ li a:hover {
     grid-row: 28;
 }
 .DigitalDesign p{
-    padding-top: 5vh;
+    padding-top: 3vh;
     line-height: 1.8;
 }
 .bild9{
